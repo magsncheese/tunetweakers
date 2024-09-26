@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Your Playlists:</h1>
+    <p>{{ playlist_list|safe }}</p>
+    <a class="button" href="{{ url_for('home') }}">Go back to Home 🌼</a>
+    <a class="button" href="{{ url_for('login') }}">Login to Spotify</a>
+</body>
+</html>
