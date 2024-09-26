@@ -17,7 +17,7 @@ SPOTIPY_REDIRECT_URI = 'http://localhost:5000/callback' #this is the location th
 #      ╰┈➤ user-read-private: allows app to read in profile information ( display name, profile pictures, etc. )
 #      ╰┈➤ playlist-read-private: allows app to read private playlists
 #      ╰┈➤ playlist-read-collaborative: allows app to read playlists that are public and collaborative
-#          ╰┈➤ might not need this?
+#          ╰┈➤ might not need this? - i think we do need this
 SCOPE = 'user-library-read user-read-private playlist-read-private playlist-read-collaborative'
 #╰────── · · ୨୧ · · ──────╯
 
