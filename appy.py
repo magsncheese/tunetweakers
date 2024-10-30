@@ -67,14 +67,15 @@ def get_playlists():
     sp = spotipy.Spotify( auth = token_info['access_token'] )
     #setting the users current playlists
     playlists = sp.current_user_playlists()
-    
-    #! IDK HOW TO MAKE IT SO THAT WE CAN DETERMINE WHICH PLAYLIST THEY WANT? !#
-    #! MAYBE WE CAN DISPLAY EACH PLAYLIST AND THEY CLICK WHICH ONE THEY WANT? !#
 
     #it thru playlist, add all items to the playlist list
     playlist_list = []
-    for idx, item in enumerate( playlists['items'] ):
-        playlist_list.append( f"{ idx + 1 }: { item['name'] } - { item['owner']['display_name'] }" )
+    for item in playlists['items']:
+        playlist_id = item['id']
+        playlist_name = item['name']
+        owner_name = item['owner']['display_name']
+        #create a hyperlink for each playlist
+        playlist_list.append(f'<a href="/playlist/{playlist_id}">{playlist_name}</a> - {owner_name}')
 
     #this should combine all of the songs in the playlist into a string so we can index it and find it easily
     playlist_string = "<br>".join( playlist_list )
@@ -82,6 +83,30 @@ def get_playlists():
     #this returns the string ( or it should, i fucked w it and i dont think it does that anymore )
     return render_template( "playlists.html", playlist_list=playlist_string )
 #╰────── · · ୨୧ · · ──────╯
+
+# Remove the duplicate route and function
+@app.route('/playlist/<playlist_id>')
+def get_playlist_tracks(playlist_id):
+    token_info = session.get('token_info', None)
+    if not token_info:
+        return redirect(url_for('login'))
+
+    sp = spotipy.Spotify(auth=token_info['access_token'])
+    # Fetch the tracks from the specified playlist
+    tracks = sp.playlist_tracks(playlist_id)
+
+    track_list = []
+    for item in tracks['items']:
+        track = item['track']
+        track_name = track['name']
+        artist_names = ', '.join(artist['name'] for artist in track['artists'])
+        album_name = track['album']['name']  # Get the album name
+        track_list.append(f"{track_name} by {artist_names} (Album: {album_name})") 
+
+    track_string = "<br>".join(track_list)
+
+    return render_template("playlistSongs.html", track_list=track_string)
+
 
 #idk what this is doing but it makes it work so
 if __name__ == '__main__':

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Tracks</title>
+</head>
+<body>
+    <h1>Playlist Tracks</h1>
+    {% if playlist_cover_image %}
+        <img src="{{ playlist_cover_image }}" alt="Playlist Cover" width="150">
+    {% endif %}
+    <div>
+        {{ track_list|safe }}
+    </div>
+    <a href="{{ url_for('get_playlists') }}">Back to Playlists</a>
+</body>
+</html>
