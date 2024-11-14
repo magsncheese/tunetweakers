@@ -95,7 +95,16 @@ def get_playlist_tracks(playlist_id):
 
     track_string = "<br>".join(track_list)
 
-    return render_template("playlistSongs.html", track_list=track_string)
+    recs = getRecommendations([item['track']['id'] for item in tracks['items']])
+
+    rec_string = "<br>".join([f"{rec['name']} by {', '.join(artist['name'] for artist in rec['artists'])} (Album: {rec['album']['name']})" for rec in recs])
+
+    return render_template("playlistSongs.html", track_list=track_string, rec_list=rec_string)
+
+def getRecommendations(track_ids):
+    sp = getAPIClient()
+    recs = sp.recommendations(seed_tracks=track_ids[:4], limit=5)['tracks']
+    return recs
 
 def getAPIClient():
     token_info = session.get('token_info', None)
