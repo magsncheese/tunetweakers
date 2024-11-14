@@ -5,8 +5,8 @@ from spotipy.oauth2 import SpotifyOAuth
 #╭────── · · ୨୧ · · ──────╮
 #╰┈➤SPOTIFY CREDINTALS (i cant spell and i refuse to learn how)
 #  ╰┈➤these are provided by spotify when the api connects (i think)
-SPOTIPY_CLIENT_ID = 'cc295554a9294e49839cdeb4e9fb812d'                    #this is the unique 'username' spotify will give our app
-SPOTIPY_CLIENT_SECRET = '2344b5f0039b40489d0ceda6ba82d1ac'            #this is the unique 'password' spotify will give our app
+SPOTIPY_CLIENT_ID = '4391265fa4874062b36969cdd539d1c6'                    #this is the unique 'username' spotify will give our app
+SPOTIPY_CLIENT_SECRET = 'fad546cc0ec2409b8a6108c7c8f9ac44'            #this is the unique 'password' spotify will give our app
 SPOTIPY_REDIRECT_URI = 'http://localhost:5000/callback' #this is the location that spotify will send the user after they login
 #╰────── · · ୨୧ · · ──────╯
 
@@ -58,23 +58,18 @@ def callback():
 #╰┈➤IF LOGGED IN, WE CAN READ THE PLAYLISTS. IF NOT, REDIRECT TO LOGIN PAGE
 @app.route( '/playlists' )
 def get_playlists():
-    #getting users info
-    token_info = session.get( 'token_info', None )
-    if not token_info:
-        return redirect( url_for( 'login' ) )
-
-    #setting the spotify spotipy user token 
-    sp = spotipy.Spotify( auth = token_info['access_token'] )
+    sp = getAPIClient()
     #setting the users current playlists
     playlists = sp.current_user_playlists()
-    
-    #! IDK HOW TO MAKE IT SO THAT WE CAN DETERMINE WHICH PLAYLIST THEY WANT? !#
-    #! MAYBE WE CAN DISPLAY EACH PLAYLIST AND THEY CLICK WHICH ONE THEY WANT? !#
 
     #it thru playlist, add all items to the playlist list
     playlist_list = []
-    for idx, item in enumerate( playlists['items'] ):
-        playlist_list.append( f"{ idx + 1 }: { item['name'] } - { item['owner']['display_name'] }" )
+    for item in playlists['items']:
+        playlist_id = item['id']
+        playlist_name = item['name']
+        owner_name = item['owner']['display_name']
+        #create a hyperlink for each playlist
+        playlist_list.append(f'<a href="/playlist/{playlist_id}">{playlist_name}</a> - {owner_name}')
 
     #this should combine all of the songs in the playlist into a string so we can index it and find it easily
     playlist_string = "<br>".join( playlist_list )
@@ -82,6 +77,32 @@ def get_playlists():
     #this returns the string ( or it should, i fucked w it and i dont think it does that anymore )
     return render_template( "playlists.html", playlist_list=playlist_string )
 #╰────── · · ୨୧ · · ──────╯
+
+# Remove the duplicate route and function
+@app.route('/playlist/<playlist_id>')
+def get_playlist_tracks(playlist_id):
+    sp = getAPIClient()
+    # Fetch the tracks from the specified playlist
+    tracks = sp.playlist_tracks(playlist_id)
+
+    track_list = []
+    for item in tracks['items']:
+        track = item['track']
+        track_name = track['name']
+        artist_names = ', '.join(artist['name'] for artist in track['artists'])
+        album_name = track['album']['name']  # Get the album name
+        track_list.append(f"{track_name} by {artist_names} (Album: {album_name})") 
+
+    track_string = "<br>".join(track_list)
+
+    return render_template("playlistSongs.html", track_list=track_string)
+
+def getAPIClient():
+    token_info = session.get('token_info', None)
+    if not token_info:
+        return redirect(url_for('login'))
+
+    return spotipy.Spotify(auth=token_info['access_token'])
 
 #idk what this is doing but it makes it work so
 if __name__ == '__main__':
