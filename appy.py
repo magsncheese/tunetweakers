@@ -43,6 +43,25 @@ sp_oauth = SpotifyOAuth( client_id=SPOTIPY_CLIENT_ID,
 def home():
     return render_template( "home.html" )
 
+#╰┈➤DISPLAYS PLAYLIST SCREEN
+# @app.route('/playlists')
+# def playlists():
+#     return render_template('playlists.html')
+
+#╰┈➤DISPLAYS USER PROFILE
+@app.route('/profile')
+def profile():
+        # Sample song data
+    song = {
+        'name': 'Song Title',
+        'artists': [
+            {'name': 'Artist 1'},
+            {'name': 'Artist 2'}
+        ]
+    }
+
+    return render_template('profile.html', song=song)
+
 #╰┈➤LOGIN REDIRECT TO SPOTIFY
 @app.route( '/login' )
 def login():
@@ -61,7 +80,7 @@ def get_playlists():
     sp = getAPIClient()
     #setting the users current playlists
     playlists = sp.current_user_playlists()
-
+    print(playlist_list)
     #it thru playlist, add all items to the playlist list
     playlist_list = []
     for item in playlists['items']:
