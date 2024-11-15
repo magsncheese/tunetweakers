@@ -1,6 +1,8 @@
 from flask import Flask, request, redirect, session, url_for, render_template
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import time
+import numpy as np
 
 #╭────── · · ୨୧ · · ──────╮
 #╰┈➤SPOTIFY CREDINTALS (i cant spell and i refuse to learn how)
@@ -86,18 +88,39 @@ def get_playlist_tracks(playlist_id):
     tracks = sp.playlist_tracks(playlist_id)
 
     track_list = []
+
+    #tracking audio features
+    track_ids = []
     for item in tracks['items']:
         track = item['track']
         track_name = track['name']
         artist_names = ', '.join(artist['name'] for artist in track['artists'])
         album_name = track['album']['name']  # Get the album name
+        track_id = track['id']
+        
         track_list.append(f"{track_name} by {artist_names} (Album: {album_name})") 
+        track_ids.append(track_id)
 
-    track_string = "<br>".join(track_list)
+    #audio features for tracks
+    features_data = audio_features(track_ids)
+
+    track_list_with_features = []
+    for track_id in track_ids:
+        features = features_data[track_id]
+        track_name = next(item['track']['name'] for item in tracks['items'] if item['track']['id'] == track_id)
+        artist_names = ', '.join(artist['name'] for artist in next(item['track']['artists'] for item in tracks['items'] if item['track']['id'] == track_id))
+        album_name = next(item['track']['album']['name'] for item in tracks['items'] if item['track']['id'] == track_id)
+        
+        track_list_with_features.append(
+            f"{track_name} by {artist_names} (Album: {album_name}) "
+            f"- Danceability: {features['danceability']:.2f}, Energy: {features['energy']:.2f}, Popularity: {features['popularity']}"
+        )
+
+    track_string = "<br>".join(track_list_with_features)
 
     recs = getRecommendations([item['track']['id'] for item in tracks['items']])
 
-    rec_string = "<br>".join([f"{rec['name']} by {', '.join(artist['name'] for artist in rec['artists'])} (Album: {rec['album']['name']})" for rec in recs])
+    rec_string = "<br>".join([f"{rec['name']} by {', '.join(artist['name'] for artist in rec['artists'])} (Album: {rec['album']['name']}" for rec in recs])
 
     return render_template("playlistSongs.html", track_list=track_string, rec_list=rec_string)
 
@@ -105,6 +128,22 @@ def getRecommendations(track_ids):
     sp = getAPIClient()
     recs = sp.recommendations(seed_tracks=track_ids[:4], limit=5)['tracks']
     return recs
+
+#get some features about the songs
+def audio_features(track_ids):
+    sp = getAPIClient()
+    features_data = {}
+    
+    for track_id in track_ids:
+        features = sp.audio_features(track_id)[0]
+        popularity = sp.track(track_id)['popularity']
+
+        features_data[track_id] = {
+            'danceability':features['danceability'],
+            'energy': features['energy'],
+            'popularity': popularity
+        }
+    return features_data
 
 def getAPIClient():
     token_info = session.get('token_info', None)
