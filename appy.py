@@ -5,8 +5,8 @@ from spotipy.oauth2 import SpotifyOAuth
 #╭────── · · ୨୧ · · ──────╮
 #╰┈➤SPOTIFY CREDINTALS (i cant spell and i refuse to learn how)
 #  ╰┈➤these are provided by spotify when the api connects (i think)
-SPOTIPY_CLIENT_ID = '4391265fa4874062b36969cdd539d1c6'                    #this is the unique 'username' spotify will give our app
-SPOTIPY_CLIENT_SECRET = 'fad546cc0ec2409b8a6108c7c8f9ac44'            #this is the unique 'password' spotify will give our app
+SPOTIPY_CLIENT_ID = 'cc295554a9294e49839cdeb4e9fb812d'                    #this is the unique 'username' spotify will give our app
+SPOTIPY_CLIENT_SECRET = '2344b5f0039b40489d0ceda6ba82d1ac'            #this is the unique 'password' spotify will give our app
 SPOTIPY_REDIRECT_URI = 'http://localhost:5000/callback' #this is the location that spotify will send the user after they login
 #╰────── · · ୨୧ · · ──────╯
 
