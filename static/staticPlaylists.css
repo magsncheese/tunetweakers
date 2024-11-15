@@ -1,0 +1,50 @@
+        body, html {
+            margin: 0; /* Remove margins */
+            padding: 0; /* Remove padding */
+            height: 100%; /* Full height for both html and body */
+            overflow: hidden; /* Prevent scrollbars from appearing */
+        }
+
+        /* Background image styling */
+        .background-box {
+            background-image: url('image.webp'); /* Path to your image */
+            background-size: cover; /* Ensure the image covers the entire screen */
+            background-position: center; /* Center the image */
+            height: 100%; /* Take the full height */
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            color: white; /* Text color for visibility */
+            text-align: center; /* Center text alignment */
+            position: relative; /* Set positioning context for absolute children */
+        }
+
+        /* Button styling */
+        .button {
+            background-color: #500973;
+            color: white;
+            padding: 15px 30px; 
+
+            border: none;
+            border-radius: 20px;
+            transition: border-radius 5s; 
+
+            font-size: 1em; 
+            cursor: pointer; 
+            transition: background-color 1s; 
+            text-decoration: none; 
+            position: absolute;
+
+            left: 25%; 
+            bottom: 8%; 
+            transform: translateX( -50% ); 
+        }
+
+        .button:hover {
+            background-color: #9e3ab7;
+            text-decoration: underline; 
+            border-radius: 5px;
+            transition: border-radius .75s; 
+            border-color: rgb(0, 0, 0);
+        }

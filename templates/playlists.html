@@ -2,15 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Playlists</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>🎶🎶🎶🎶🎶🎶🎶🎶</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='staticPlaylists.css') }}">
+
+    <style>
+        /* Reset some default styles */
+        body, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        /* Navbar container */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1F2F25; /* Dark background */
+            padding: 10px 20px;
+        }
+
+        /* Navbar brand/logo */
+        .navbar .brand {
+            color: #fff; /* White text */
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        /* Navbar links */
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: #fff; /* White text */
+            text-decoration: none;
+            font-size: 18px;
+            padding: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #021b0a; /* Slightly lighter gray on hover */
+            border-radius: 1px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar ul li {
+                margin-left: 0;
+                margin-bottom: 1px;
+            }
+        }
+
+        .glow {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #02941d, 0 0 40px #0b7901, 0 0 50px #01761b, 0 0 60px #017126, 0 0 70px #015a14;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #2d9033, 0 0 40px #2b8e40, 0 0 50px #2b8e3f, 0 0 60px #298c2e, 0 0 70px #2b913e, 0 0 80px #45962d;
+  }
+}
+    </style>
 </head>
 <body>
+
+    <header>
+        <nav class="navbar">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Image">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="background-box">
-        <h1>Your Playlists</h1>
+        <h1 class="glow">Your Playlists</h1>
 
         <!-- Place your image here -->
-        <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Playlist Image">
+        <img src="{{ url_for('static', filename='image.webp') }}" alt="Background Image">
 
         <p>Check out your awesome playlists below!</p>
 
