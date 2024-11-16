@@ -85,44 +85,30 @@ def get_playlists():
 def get_playlist_tracks(playlist_id):
     sp = getAPIClient()
     # Fetch the tracks from the specified playlist
-    tracks = sp.playlist_tracks(playlist_id)
+    tracks = [item['track'] for item in sp.playlist_tracks(playlist_id)['items']]
+    playlist_tracks_info = big_ol_block_of_info_about_tracks(tracks)
+    recommended_tracks_info = big_ol_block_of_info_about_tracks(getRecommendations([track['id'] for track in tracks]))
 
-    track_list = []
+    return render_template("playlistSongs.html", playlist_tracks_info=playlist_tracks_info, recommended_tracks_info=recommended_tracks_info)
 
-    #tracking audio features
-    track_ids = []
-    for item in tracks['items']:
-        track = item['track']
-        track_name = track['name']
-        artist_names = ', '.join(artist['name'] for artist in track['artists'])
-        album_name = track['album']['name']  # Get the album name
-        track_id = track['id']
-        
-        track_list.append(f"{track_name} by {artist_names} (Album: {album_name})") 
-        track_ids.append(track_id)
+def track_string(track_obj):
+    artist_names = ", ".join(artist['name'] for artist in track_obj['artists'])
+    return f"{track_obj['name']} by {artist_names} (Album: {track_obj['album']['name']})"
 
-    #audio features for tracks
-    features_data = audio_features(track_ids)
+def features_string(features_obj, popularity):
+    return f"Danceability: {features_obj['danceability']:.2f}, Energy: {features_obj['energy']:.2f}, Popularity: {popularity}"
 
-    track_list_with_features = []
-    for track_id in track_ids:
-        features = features_data[track_id]
-        track_name = next(item['track']['name'] for item in tracks['items'] if item['track']['id'] == track_id)
-        artist_names = ', '.join(artist['name'] for artist in next(item['track']['artists'] for item in tracks['items'] if item['track']['id'] == track_id))
-        album_name = next(item['track']['album']['name'] for item in tracks['items'] if item['track']['id'] == track_id)
-        
-        track_list_with_features.append(
-            f"{track_name} by {artist_names} (Album: {album_name}) "
-            f"- Danceability: {features['danceability']:.2f}, Energy: {features['energy']:.2f}, Popularity: {features['popularity']}"
-        )
+def tracks_with_features_strings(tracks_by_id, features_by_id):
+    track_strings = []
+    for id, track in tracks_by_id.items():
+        str = track_string(track) + " - " + features_string(features_by_id[id], track['popularity'])
+        track_strings.append(str)
+    return track_strings
 
-    track_string = "<br>".join(track_list_with_features)
-
-    recs = getRecommendations([item['track']['id'] for item in tracks['items']])
-
-    rec_string = "<br>".join([f"{rec['name']} by {', '.join(artist['name'] for artist in rec['artists'])} (Album: {rec['album']['name']}" for rec in recs])
-
-    return render_template("playlistSongs.html", track_list=track_string, rec_list=rec_string)
+def big_ol_block_of_info_about_tracks(tracks):
+    tracks_by_id = {track['id']: track for track in tracks} 
+    features_by_id = audio_features([id for id in tracks_by_id])
+    return "<br>".join(tracks_with_features_strings(tracks_by_id, features_by_id))
 
 def getRecommendations(track_ids):
     sp = getAPIClient()

@@ -7,12 +7,12 @@
   </head>
   <body>
     <h1>Recommendations</h1>
-    <div>{{ rec_list|safe }}</div>
+    <div>{{ recommended_tracks_info|safe }}</div>
     <h1>Playlist Tracks</h1>
     {% if playlist_cover_image %}
     <img src="{{ playlist_cover_image }}" alt="Playlist Cover" width="150" />
     {% endif %}
-    <div>{{ track_list|safe }}</div>
+    <div>{{ playlist_tracks_info|safe }}</div>
     <a href="{{ url_for('get_playlists') }}">Back to Playlists</a>
   </body>
 </html>
