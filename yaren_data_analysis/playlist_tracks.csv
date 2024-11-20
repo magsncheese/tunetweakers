@@ -1,0 +1,51 @@
+Name,Artist(s),Album,Acousticness,Danceability,Duration_ms,Energy,Instrumentalness,Liveness,Loudness,Speechiness,Tempo,Valance
+Tangled In The Great Escape,"Pierce The Veil, Jason Butler",Collide With The Sky,0.00711,0.278,356893,0.933,1.68e-05,0.384,-3.85,0.115,105.001,0.116
+Somebody Told Me,The Killers,Hot Fuss,9.04e-05,0.497,197200,0.97,0.000674,0.101,-4.851,0.0836,138.081,0.689
+Cherry Waves,Deftones,Saturday Night Wrist,0.000362,0.47,317707,0.859,0.00691,0.142,-3.663,0.0537,124.01,0.17
+Blood on the Sheets,VIOLENT VIRA,Blood on the Sheets,0.00598,0.411,229500,0.894,1.22e-05,0.32,-7.697,0.0722,159.953,0.349
+Living Dead Girl,Rob Zombie,Hellbilly Deluxe,0.00512,0.518,201400,0.948,0.0996,0.228,-5.579,0.0676,103.025,0.548
+R U Mine?,Arctic Monkeys,AM,0.00616,0.288,201726,0.758,0.0,0.303,-5.692,0.0371,97.094,0.619
+One Hundred Sleepless Nights,Pierce The Veil,Collide With The Sky,0.000141,0.293,221840,0.932,0.000667,0.0648,-2.559,0.11,122.739,0.514
+Smells Like Teen Spirit,Nirvana,Nevermind (Remastered),2.55e-05,0.502,301920,0.912,0.000173,0.106,-4.556,0.0564,116.761,0.72
+How You Remind Me,Nickelback,Silver Side Up,0.00135,0.446,223840,0.764,0.0,0.099,-5.042,0.033,172.094,0.543
+Should I Stay or Should I Go - Remastered,The Clash,Combat Rock (Remastered),0.0804,0.743,188987,0.836,0.0,0.384,-6.465,0.116,113.375,0.82
+505,Arctic Monkeys,Favourite Worst Nightmare (Standard Version),0.00237,0.52,253587,0.852,5.79e-05,0.0733,-5.866,0.0543,140.267,0.234
+Lonely Day,System Of A Down,Hypnotize,0.362,0.47,167907,0.796,1.1e-06,0.133,-3.277,0.0336,113.108,0.215
+Search,Scarlet House,Search,0.00476,0.474,126857,0.448,0.919,0.249,-16.742,0.0256,139.959,0.0695
+"If I'm James Dean, You're Audrey Hepburn",Sleeping With Sirens,With Ears To See And Eyes To Hear,2.1e-05,0.426,219107,0.936,0.0,0.926,-5.52,0.0828,158.038,0.416
+I Was Made For Lovin' You,KISS,Dynasty,0.214,0.768,271240,0.852,7.36e-05,0.0723,-6.215,0.038,128.373,0.867
+Why'd You Only Call Me When You're High?,Arctic Monkeys,AM,0.0483,0.691,161124,0.631,1.13e-05,0.104,-6.478,0.0368,92.004,0.8
+Dead!,My Chemical Romance,The Black Parade,0.0037,0.481,195520,0.973,0.000877,0.325,-1.945,0.0542,99.331,0.362
+Plug in Baby,Muse,Origin of Symmetry,6.94e-06,0.408,218000,0.965,0.000402,0.11,-4.232,0.05,136.018,0.349
+Can You Feel My Heart,Bring Me The Horizon,Sempiternal (Expanded Edition),0.00201,0.15,228147,0.859,0.194,0.387,-2.827,0.0595,170.527,0.354
+The Drug In Me Is You,Falling In Reverse,The Drug In Me Is You,0.0149,0.548,218787,0.855,0.0,0.127,-3.266,0.151,145.133,0.644
+Pretty Visitors,Arctic Monkeys,Humbug,0.0614,0.244,220507,0.896,2.83e-05,0.127,-5.576,0.464,83.354,0.142
+"Paint It, Black",The Rolling Stones,Aftermath,0.0493,0.464,202267,0.795,0.00244,0.399,-9.267,0.0926,158.691,0.612
+Scotty Doesn't Know,Lustra,Left for Dead,0.000449,0.317,175200,0.887,9.23e-06,0.363,-4.525,0.0472,174.009,0.544
+Zero - Remastered 2012,The Smashing Pumpkins,Mellon Collie And The Infinite Sadness (Deluxe Edition),3.49e-05,0.438,160173,0.728,0.57,0.0509,-7.105,0.0458,128.04,0.701
+Helena,My Chemical Romance,Three Cheers for Sweet Revenge,0.0142,0.356,204733,0.96,0.0,0.209,-3.487,0.104,125.921,0.0857
+Knee Socks,Arctic Monkeys,AM,0.123,0.665,257563,0.542,0.00291,0.342,-8.323,0.033,97.975,0.587
+Rhiannon,Fleetwood Mac,Fleetwood Mac,0.111,0.723,252773,0.49,0.0946,0.0923,-14.745,0.0296,129.012,0.795
+Black Hole Sun,Soundgarden,Superunknown (Deluxe Edition),0.000217,0.35,318587,0.828,0.000161,0.0774,-5.373,0.041,105.435,0.147
+Break Stuff,Limp Bizkit,Significant Other,0.0128,0.432,166707,0.884,0.000457,0.166,-6.657,0.128,108.835,0.619
+Bullet With Butterfly Wings - Remastered 2012,The Smashing Pumpkins,Mellon Collie And The Infinite Sadness (Deluxe Edition),5.59e-05,0.404,258467,0.72,0.836,0.0466,-9.18,0.0623,121.864,0.475
+Crying Lightning,Arctic Monkeys,Humbug,0.0148,0.498,224827,0.885,0.00041,0.239,-4.423,0.0461,106.719,0.67
+All I Think About Now,Pixies,Head Carrier,0.00405,0.251,187320,0.575,0.00135,0.15,-7.819,0.0311,185.731,0.218
+Zombie,The Cranberries,No Need To Argue (The Complete Sessions 1994-1995),0.0158,0.309,306440,0.649,0.00591,0.367,-8.994,0.035,166.915,0.312
+7 Words,Deftones,Adrenaline,0.0001,0.431,223893,0.906,0.0001,0.123,-6.13,0.0945,125.459,0.53
+Follow You,Bring Me The Horizon,That's The Spirit,0.0765,0.54,231107,0.661,0.0,0.125,-5.534,0.0381,90.012,0.506
+Arabella,Arctic Monkeys,AM,0.0202,0.579,207357,0.558,1.26e-06,0.212,-6.986,0.0895,179.949,0.506
+"You're Gonna Go Far, Kid",The Offspring,"Rise And Fall, Rage And Grace",0.00428,0.55,177827,0.917,0.0,0.197,-3.159,0.0638,126.115,0.601
+Breed,Nirvana,Nevermind (Remastered),3.69e-06,0.262,184040,0.969,0.00213,0.133,-4.675,0.0894,158.433,0.263
+Decode,Paramore,Decode,0.000686,0.28,261960,0.87,0.00608,0.101,-4.219,0.0592,164.057,0.284
+Time is Running Out,Muse,Absolution,0.000644,0.544,236536,0.892,0.00266,0.0832,-3.212,0.0591,118.005,0.317
+Do Me a Favour,Arctic Monkeys,Favourite Worst Nightmare (Standard Version),7.84e-05,0.471,205240,0.735,0.122,0.101,-6.685,0.0582,180.127,0.636
+All These Things That I've Done,The Killers,Hot Fuss,0.00245,0.539,301867,0.702,2.37e-05,0.117,-7.291,0.0436,118.106,0.206
+The Middle,Jimmy Eat World,Bleed American,0.0371,0.643,165853,0.849,0.0,0.058,-5.428,0.0526,162.152,0.903
+Linger,The Cranberries,"Everybody Else Is Doing It, So Why Can't We?",0.0783,0.439,274707,0.434,5.18e-05,0.14,-14.918,0.0265,94.843,0.204
+The Pretender,Foo Fighters,"Echoes, Silence, Patience & Grace",0.000917,0.433,269373,0.959,0.0,0.028,-4.04,0.0431,172.984,0.365
+I Wanna Be Yours,Arctic Monkeys,AM,0.136,0.464,183956,0.417,0.022,0.0974,-9.345,0.0256,67.528,0.479
+Shut Me Up,Mindless Self Indulgence,You'll Rebel to Anything (Expanded and Remastered 2008),0.000673,0.589,168533,0.797,0.0,0.0246,-4.213,0.174,174.041,0.786
+Digital Bath,Deftones,White Pony,0.00122,0.338,255373,0.859,0.211,0.0936,-4.938,0.0824,92.966,0.504
+The Ballad of Mona Lisa,Panic! At The Disco,Vices & Virtues,0.000362,0.436,226680,0.893,0.0,0.103,-4.18,0.0556,124.113,0.0794
+My Hero,Foo Fighters,The Colour And The Shape,6.2e-05,0.398,260027,0.927,0.000177,0.0575,-4.212,0.0567,77.106,0.311

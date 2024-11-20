@@ -1,7 +1,6 @@
 from flask import Flask, request, redirect, session, url_for, render_template
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-import time
 import numpy as np
 import pandas as pd
 import random
@@ -111,11 +110,13 @@ def track_info_dict(track, features):
         'Album': track['album']['name'], 
         'Acousticness': features['acousticness'],
         'Danceability': features['danceability'],
+        'Duration_ms' : features['duration_ms'],
         'Energy': features['energy'],
         'Instrumentalness': features['instrumentalness'],
         'Liveness': features['liveness'],
         'Loudness': features['loudness'],
         'Speechiness': features['speechiness'],
+        'Tempo': features['tempo'],
         'Valance': features['valence']
     }
     
