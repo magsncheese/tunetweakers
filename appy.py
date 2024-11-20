@@ -134,7 +134,7 @@ def getAllPlaylistTracks(sp: spotipy.Spotify, playlist_id):
     tracks = []
     offset = 0
     total = 1
-    while offset < 1:
+    while offset < total:
         response = sp.playlist_tracks(playlist_id, limit=100, offset=offset)
         total = response['total']
         new_tracks = [item['track'] for item in response['items']]
