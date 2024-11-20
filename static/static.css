@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
         body, html {
             margin: 0; /* Remove margins */
             padding: 0; /* Remove padding */
@@ -29,8 +32,8 @@
             border: none;
             border-radius: 20px;
             transition: border-radius 5s; 
-
-            font-size: 1em; 
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7em; 
             cursor: pointer; 
             transition: background-color 1s; 
             text-decoration: none; 
