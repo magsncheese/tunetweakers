@@ -3,8 +3,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import numpy as np
 import pandas as pd
-
-
+import random
 
 #╭────── · · ୨୧ · · ──────╮
 #╰┈➤SPOTIFY CREDINTALS (i cant spell and i refuse to learn how)
@@ -82,25 +81,28 @@ def get_playlists():
     return render_template( "playlists.html", playlist_list=playlist_string )
 #╰────── · · ୨୧ · · ──────╯
 
-# Remove the duplicate route and function
+# Page for displaying information about tracks in a playlist as well as
+#   getting and displaying recommended tracks based on the playlist
 @app.route('/playlist/<playlist_id>')
 def get_playlist_tracks(playlist_id):
     sp = getAPIClient()
-    # Fetch the tracks from the specified playlist
-    tracks = [item['track'] for item in sp.playlist_tracks(playlist_id, limit=100)['items']]
-    #puts the tracks from your playlist into a DataFrame
-    playlist_tracks_info = big_ol_dataframe_of_track_info(tracks)
-    # playlist_tracks_info.to_csv('playlist_tracks.csv', index=False) # csv to do data anal
-    playlist_tracks_html = playlist_tracks_info.to_html(classes='table table-striped', index=False) #to render on the screen
-    #puts the tracks recommended from your playlist into a DataFrame
-    recommended_tracks_df = big_ol_dataframe_of_track_info(getRecommendations([track['id'] for track in tracks]))
-    # recommended_tracks_df.to_csv('recommended_tracks.csv', index=False) # csv to do data anal
 
-    recommended_tracks_html = recommended_tracks_df.to_html(classes='table table-striped', index=False) #to render on the screen
-    #renders onto the screen
+    # Fetch the tracks from the specified playlist
+    tracks = getAllPlaylistTracks(sp, playlist_id)
+
+    # Get Dataframe of track metadata and audio features for all tracks in playlist
+    playlist_tracks_info = big_ol_dataframe_of_track_info(tracks)
+    # Get HTML table representation of dataframe
+    playlist_tracks_html = playlist_tracks_info.to_html(classes='table table-striped', index=False)
+
+    # Get recommendations based on tracks in the playlist and then do the same thing
+    recommended_tracks_df = big_ol_dataframe_of_track_info(getRecommendations([track['id'] for track in tracks]))
+    recommended_tracks_html = recommended_tracks_df.to_html(classes='table table-striped', index=False)
+
+    # Plug tables into template page and return
     return render_template("playlistSongs.html", playlist_tracks_info=playlist_tracks_html, recommended_tracks_info=recommended_tracks_html)
 
-
+# Organize relevant metadata and audio features for a track into a dict
 def track_info_dict(track, features):
     return {
         'Name': track['name'],
@@ -118,18 +120,45 @@ def track_info_dict(track, features):
         'Valance': features['valence']
     }
     
-#creates DataFrame    
+# tracks: list of Spotify API track objects
+# Gets audio features for the given tracks and returns a DataFrame containing
+#   metadata and audio features for each track
 def big_ol_dataframe_of_track_info(tracks):
     features_by_id = audio_features_by_id([track['id'] for track in tracks])
     track_data = [track_info_dict(track, features_by_id[track['id']]) for track in tracks]
     return pd.DataFrame(track_data)
-   
-def getRecommendations(track_ids):
-    sp = getAPIClient()
-    recs = sp.recommendations(seed_tracks=track_ids[:4], limit=5)['tracks']
-    return recs
 
-#get some features about the songs
+# Spotify API can only get 100 tracks at a time from a playlist
+# This will repeatedly get 100 tracks until all playlist tracks are retrieved
+def getAllPlaylistTracks(sp: spotipy.Spotify, playlist_id):
+    tracks = []
+    offset = 0
+    total = 69420
+    while offset < total:
+        response = sp.playlist_tracks(playlist_id, limit=100, offset=offset)
+        total = response['total']
+        new_tracks = [item['track'] for item in response['items']]
+        tracks += new_tracks
+        offset += 100
+    return tracks
+
+# Uses the Spotify Web API to get recommendations based on provided tracks.
+# The API endpoint can only use at most 5 seed tracks, so if more than 5 are
+#   provided, this generates n random samples of 5 track ids and gets one
+#   recommendation for each sample.
+def getRecommendations(track_ids, n=10):
+    sp = getAPIClient()
+    if len(track_ids) <= 5:
+        return sp.recommendations(seed_tracks=track_ids, limit=n)['tracks']
+    else:
+        recs = []
+        for i in range(n):
+            seed_track_ids = random.sample(track_ids, 5)
+            recs += sp.recommendations(seed_tracks=seed_track_ids, limit=1)['tracks']
+        return recs
+
+# Gets Spotify's estimated audio feature values for the track IDs
+# Returns as a dict of feature objects keyed on track id
 def audio_features_by_id(track_ids):
     sp = getAPIClient()
     features = []
@@ -137,7 +166,7 @@ def audio_features_by_id(track_ids):
         features += sp.audio_features(track_ids[i:i+100])
     return {track_ids[i]: features[i] for i in range(len(track_ids))}
     
-
+# Gets an instance of the Spotify API client
 def getAPIClient():
     token_info = session.get('token_info', None)
     if not token_info:
