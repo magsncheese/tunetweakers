@@ -58,6 +58,18 @@ def callback():
     session['token_info'] = token_info
     return redirect( url_for( 'get_playlists' ) )
 
+def get_playlist_images(sp):
+    playlist_images = {}
+    user_playlists = sp.current_user_playlists()
+
+    for playlist in user_playlists['items']:
+        playlist_images[playlist['id']] = {
+            'name': playlist['name'],
+            'image': playlist['images'][0]['url'] if playlist['images'] else None
+        }
+
+    return playlist_images
+
 #╰┈➤IF LOGGED IN, WE CAN READ THE PLAYLISTS. IF NOT, REDIRECT TO LOGIN PAGE
 @app.route( '/playlists' )
 def get_playlists():
@@ -77,8 +89,10 @@ def get_playlists():
     #this should combine all of the songs in the playlist into a string so we can index it and find it easily
     playlist_string = "<br>".join( playlist_list )
 
+    playlist_images = get_playlist_images(sp)
+
     #this returns the string ( or it should, i fucked w it and i dont think it does that anymore )
-    return render_template( "playlists.html", playlist_list=playlist_string )
+    return render_template( "playlists.html", playlist_list=playlist_string, playlist_images=playlist_images)
 #╰────── · · ୨୧ · · ──────╯
 
 # Page for displaying information about tracks in a playlist as well as
@@ -175,3 +189,20 @@ def getAPIClient():
 #idk what this is doing but it makes it work so
 if __name__ == '__main__':
     app.run( debug = True )
+
+from flask import Flask, render_template
+from spotipy import Spotify
+from spotipy.oauth2 import SpotifyClientCredentials
+
+app = Flask(__name__)
+
+# Spotify API credentials
+CLIENT_ID = 'your_client_id'
+CLIENT_SECRET = 'your_client_secret'
+
+# Authenticate with Spotify
+auth_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
+spotify = Spotify(auth_manager=auth_manager)
+
+# Function to get playlist names and images
+
