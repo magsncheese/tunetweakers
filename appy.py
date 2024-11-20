@@ -82,21 +82,28 @@ def get_playlists():
     return render_template( "playlists.html", playlist_list=playlist_string )
 #╰────── · · ୨୧ · · ──────╯
 
-# Remove the duplicate route and function
+# Page for displaying information about tracks in a playlist as well as
+#   getting and displaying recommended tracks based on the playlist
 @app.route('/playlist/<playlist_id>')
 def get_playlist_tracks(playlist_id):
     sp = getAPIClient()
+    
     # Fetch the tracks from the specified playlist
     tracks = [item['track'] for item in sp.playlist_tracks(playlist_id, limit=100)['items']]
-    #puts the tracks from your playlist into a DataFrame
+
+    # Get Dataframe of track metadata and audio features for all tracks in playlist
     playlist_tracks_info = big_ol_dataframe_of_track_info(tracks)
-    playlist_tracks_html = playlist_tracks_info.to_html(classes='table table-striped', index=False) #to render on the screen
-    #puts the tracks recommended from your playlist into a DataFrame
+    # Get HTML table representation of dataframe
+    playlist_tracks_html = playlist_tracks_info.to_html(classes='table table-striped', index=False)
+
+    # Get recommendations based on tracks in the playlist and then do the same thing
     recommended_tracks_df = big_ol_dataframe_of_track_info(getRecommendations([track['id'] for track in tracks]))
-    recommended_tracks_html = recommended_tracks_df.to_html(classes='table table-striped', index=False) #to render on the screen
-    #renders onto the screen
+    recommended_tracks_html = recommended_tracks_df.to_html(classes='table table-striped', index=False)
+
+    # Plug tables into template page and return
     return render_template("playlistSongs.html", playlist_tracks_info=playlist_tracks_html, recommended_tracks_info=recommended_tracks_html)
 
+# Organize relevant metadata and audio features for a track into a dict
 def track_info_dict(track, features):
     return {
         'Name': track['name'],
@@ -112,7 +119,9 @@ def track_info_dict(track, features):
         'Valance': features['valence']
     }
     
-#creates DataFrame    
+# tracks: list of Spotify API track objects
+# Gets audio features for the given tracks and returns a DataFrame containing
+#   metadata and audio features for each track
 def big_ol_dataframe_of_track_info(tracks):
     features_by_id = audio_features_by_id([track['id'] for track in tracks])
     track_data = [track_info_dict(track, features_by_id[track['id']]) for track in tracks]
@@ -133,7 +142,8 @@ def getRecommendations(track_ids, n=10):
             recs += sp.recommendations(seed_tracks=seed_track_ids, limit=1)['tracks']
         return recs
 
-#get some features about the songs
+# Gets Spotify's estimated audio feature values for the track IDs
+# Returns as a dict of feature objects keyed on track id
 def audio_features_by_id(track_ids):
     sp = getAPIClient()
     features = []
@@ -141,7 +151,7 @@ def audio_features_by_id(track_ids):
         features += sp.audio_features(track_ids[i:i+100])
     return {track_ids[i]: features[i] for i in range(len(track_ids))}
     
-
+# Gets an instance of the Spotify API client
 def getAPIClient():
     token_info = session.get('token_info', None)
     if not token_info:
