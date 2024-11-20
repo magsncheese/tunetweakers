@@ -3,6 +3,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import time
 import numpy as np
+import pandas as pd
 
 #╭────── · · ୨୧ · · ──────╮
 #╰┈➤SPOTIFY CREDINTALS (i cant spell and i refuse to learn how)
@@ -86,49 +87,36 @@ def get_playlist_tracks(playlist_id):
     sp = getAPIClient()
     # Fetch the tracks from the specified playlist
     tracks = [item['track'] for item in sp.playlist_tracks(playlist_id, limit=100)['items']]
-    playlist_tracks_info = big_ol_table_of_track_info(tracks)
-    recommended_tracks_info = big_ol_table_of_track_info(getRecommendations([track['id'] for track in tracks]))
+    #puts the tracks from your playlist into a DataFrame
+    playlist_tracks_info = big_ol_dataframe_of_track_info(tracks)
+    playlist_tracks_html = playlist_tracks_info.to_html(classes='table table-striped', index=False) #to render on the screen
+    #puts the tracks recommended from your playlist into a DataFrame
+    recommended_tracks_df = big_ol_dataframe_of_track_info(getRecommendations([track['id'] for track in tracks]))
+    recommended_tracks_html = recommended_tracks_df.to_html(classes='table table-striped', index=False) #to render on the screen
+    #renders onto the screen
+    return render_template("playlistSongs.html", playlist_tracks_info=playlist_tracks_html, recommended_tracks_info=recommended_tracks_html)
 
-    return render_template("playlistSongs.html", playlist_tracks_info=playlist_tracks_info, recommended_tracks_info=recommended_tracks_info)
-
-def track_info_table_row(track, features):
-    return f'''
-    <tr>
-        <td>{track['name']}</td>
-        <td>{", ".join(artist['name'] for artist in track['artists'])}</td>
-        <td>{track['album']['name']}</td>
-        <td>{features['acousticness']}</td>
-        <td>{features['danceability']}</td>
-        <td>{features['energy']}</td>
-        <td>{features['instrumentalness']}</td>
-        <td>{features['liveness']}</td>
-        <td>{features['loudness']}</td>
-        <td>{features['speechiness']}</td>
-        <td>{features['valence']}</td>
-    </tr>
-    '''
-
-def big_ol_table_of_track_info(tracks):
+def track_info_dict(track, features):
+    return {
+        'Name': track['name'],
+        'Artist(s)': ", ".join(artist['name'] for artist in track['artists']),
+        'Album': track['album']['name'], 
+        'Acousticness': features['acousticness'],
+        'Danceability': features['danceability'],
+        'Energy': features['energy'],
+        'Instrumentalness': features['instrumentalness'],
+        'Liveness': features['liveness'],
+        'Loudness': features['loudness'],
+        'Speechiness': features['speechiness'],
+        'Valance': features['valence']
+    }
+    
+#creates DataFrame    
+def big_ol_dataframe_of_track_info(tracks):
     features_by_id = audio_features_by_id([track['id'] for track in tracks])
-    return f'''
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Artist(s)</th>
-            <th>Album</th>
-            <th>Acousticness</th>
-            <th>Danceability</th>
-            <th>Energy</th>
-            <th>Instrumentalness</th>
-            <th>Liveness</th>
-            <th>Loudness</th>
-            <th>Speechiness</th>
-            <th>Valence</th>
-        </tr>
-        {"\n".join([track_info_table_row(track, features_by_id[track['id']]) for track in tracks])}
-    </table>
-    '''
-
+    track_data = [track_info_dict(track, features_by_id[track['id']]) for track in tracks]
+    return pd.DataFrame(track_data)
+   
 def getRecommendations(track_ids):
     sp = getAPIClient()
     recs = sp.recommendations(seed_tracks=track_ids[:4], limit=5)['tracks']
@@ -138,12 +126,10 @@ def getRecommendations(track_ids):
 def audio_features_by_id(track_ids):
     sp = getAPIClient()
     features = []
-
-    # can only get 100 at a time
     for i in range(0, len(track_ids), 100):
         features += sp.audio_features(track_ids[i:i+100])
-
     return {track_ids[i]: features[i] for i in range(len(track_ids))}
+    
 
 def getAPIClient():
     token_info = session.get('token_info', None)
