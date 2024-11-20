@@ -1,0 +1,6 @@
+Name,Artist(s),Album,Acousticness,Danceability,Duration_ms,Energy,Instrumentalness,Liveness,Loudness,Speechiness,Tempo,Valance
+Darkness,SWEET SPINE,Darkness,0.000212,0.504,228923,0.671,0.00641,0.123,-10.641,0.0332,130.041,0.272
+Ain't It Fun,Paramore,Paramore,0.154,0.61,296520,0.893,4.41e-05,0.021,-3.681,0.0921,104.031,0.673
+Fast Times at Clairemont High,Pierce The Veil,Selfish Machines,0.00626,0.537,241667,0.953,0.0,0.132,-2.957,0.0422,93.006,0.4
+Always,blink-182,blink-182,0.0068,0.456,251893,0.95,0.0149,0.207,-3.858,0.0854,158.323,0.561
+Bullet With Butterfly Wings - Remastered 2012,The Smashing Pumpkins,Mellon Collie And The Infinite Sadness (Deluxe Edition),5.59e-05,0.404,258467,0.72,0.836,0.0466,-9.18,0.0623,121.864,0.475

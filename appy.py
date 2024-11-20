@@ -1,9 +1,10 @@
 from flask import Flask, request, redirect, session, url_for, render_template
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-import time
 import numpy as np
 import pandas as pd
+
+
 
 #╭────── · · ୨୧ · · ──────╮
 #╰┈➤SPOTIFY CREDINTALS (i cant spell and i refuse to learn how)
@@ -89,12 +90,16 @@ def get_playlist_tracks(playlist_id):
     tracks = [item['track'] for item in sp.playlist_tracks(playlist_id, limit=100)['items']]
     #puts the tracks from your playlist into a DataFrame
     playlist_tracks_info = big_ol_dataframe_of_track_info(tracks)
+    # playlist_tracks_info.to_csv('playlist_tracks.csv', index=False) # csv to do data anal
     playlist_tracks_html = playlist_tracks_info.to_html(classes='table table-striped', index=False) #to render on the screen
     #puts the tracks recommended from your playlist into a DataFrame
     recommended_tracks_df = big_ol_dataframe_of_track_info(getRecommendations([track['id'] for track in tracks]))
+    # recommended_tracks_df.to_csv('recommended_tracks.csv', index=False) # csv to do data anal
+
     recommended_tracks_html = recommended_tracks_df.to_html(classes='table table-striped', index=False) #to render on the screen
     #renders onto the screen
     return render_template("playlistSongs.html", playlist_tracks_info=playlist_tracks_html, recommended_tracks_info=recommended_tracks_html)
+
 
 def track_info_dict(track, features):
     return {
@@ -103,11 +108,13 @@ def track_info_dict(track, features):
         'Album': track['album']['name'], 
         'Acousticness': features['acousticness'],
         'Danceability': features['danceability'],
+        'Duration_ms' : features['duration_ms'],
         'Energy': features['energy'],
         'Instrumentalness': features['instrumentalness'],
         'Liveness': features['liveness'],
         'Loudness': features['loudness'],
         'Speechiness': features['speechiness'],
+        'Tempo': features['tempo'],
         'Valance': features['valence']
     }
     
