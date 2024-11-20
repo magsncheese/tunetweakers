@@ -87,9 +87,9 @@ def get_playlists():
 @app.route('/playlist/<playlist_id>')
 def get_playlist_tracks(playlist_id):
     sp = getAPIClient()
-    
+
     # Fetch the tracks from the specified playlist
-    tracks = [item['track'] for item in sp.playlist_tracks(playlist_id, limit=100)['items']]
+    tracks = getAllPlaylistTracks(sp, playlist_id)
 
     # Get Dataframe of track metadata and audio features for all tracks in playlist
     playlist_tracks_info = big_ol_dataframe_of_track_info(tracks)
@@ -126,6 +126,20 @@ def big_ol_dataframe_of_track_info(tracks):
     features_by_id = audio_features_by_id([track['id'] for track in tracks])
     track_data = [track_info_dict(track, features_by_id[track['id']]) for track in tracks]
     return pd.DataFrame(track_data)
+
+# Spotify API can only get 100 tracks at a time from a playlist
+# This will repeatedly get 100 tracks until all playlist tracks are retrieved
+def getAllPlaylistTracks(sp: spotipy.Spotify, playlist_id):
+    tracks = []
+    offset = 0
+    total = 69420
+    while offset < total:
+        response = sp.playlist_tracks(playlist_id, limit=100, offset=offset)
+        total = response['total']
+        new_tracks = [item['track'] for item in response['items']]
+        tracks += new_tracks
+        offset += 100
+    return tracks
 
 # Uses the Spotify Web API to get recommendations based on provided tracks.
 # The API endpoint can only use at most 5 seed tracks, so if more than 5 are
