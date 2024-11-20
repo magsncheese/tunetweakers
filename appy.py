@@ -3,6 +3,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import time
 import numpy as np
+import random
 
 #╭────── · · ୨୧ · · ──────╮
 #╰┈➤SPOTIFY CREDINTALS (i cant spell and i refuse to learn how)
@@ -129,10 +130,20 @@ def big_ol_table_of_track_info(tracks):
     </table>
     '''
 
-def getRecommendations(track_ids):
+# Uses the Spotify Web API to get recommendations based on provided tracks.
+# The API endpoint can only use at most 5 seed tracks, so if more than 5 are
+#   provided, this generates n random samples of 5 track ids and gets one
+#   recommendation for each sample.
+def getRecommendations(track_ids, n=10):
     sp = getAPIClient()
-    recs = sp.recommendations(seed_tracks=track_ids[:4], limit=5)['tracks']
-    return recs
+    if len(track_ids) <= 5:
+        return sp.recommendations(seed_tracks=track_ids, limit=n)['tracks']
+    else:
+        recs = []
+        for i in range(n):
+            seed_track_ids = random.sample(track_ids, 5)
+            recs += sp.recommendations(seed_tracks=seed_track_ids, limit=1)['tracks']
+        return recs
 
 #get some features about the songs
 def audio_features_by_id(track_ids):
