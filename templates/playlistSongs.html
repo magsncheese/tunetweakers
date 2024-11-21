@@ -1,18 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Playlist Tracks</title>
-  </head>
-  <body>
-    <h1>Recommendations</h1>
-    <div>{{ recommended_tracks_info|safe }}</div>
-    <h1>Playlist Tracks</h1>
-    {% if playlist_cover_image %}
-    <img src="{{ playlist_cover_image }}" alt="Playlist Cover" width="150" />
-    {% endif %}
-    <div>{{ playlist_tracks_info|safe }}</div>
-    <a href="{{ url_for('get_playlists') }}">Back to Playlists</a>
-  </body>
+    <title>Playlist Tracks and Recommendations</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 70px 0 0; 
+            background-color: #1f2f25; 
+            color: white;
+            text-align: center;
+            overflow-x: hidden; 
+        }
+
+        h1 {
+            color: #ffddff; 
+            margin-bottom: 20px;
+        }
+
+        /* Topbar Styling */
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1d2c24; 
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            z-index: 1000; 
+        }
+
+        .topbar a {
+            color: #ffddff;
+            text-decoration: none;
+            font-size: 1rem;
+            background-color: #500973;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .topbar a:hover {
+            background-color: #9e3ab7; 
+        }
+
+        /* Accordion Button Styling */
+        .accordion-button {
+            background-color: #500973;
+            color: #ffddff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: block;
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto; 
+            text-align: left;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .accordion-button:hover {
+            background-color: #9e3ab7;
+        }
+
+        .accordion-content {
+            overflow: hidden;
+            max-height: 2000px; 
+            transition: max-height 0.3s ease;
+            width: 95%; 
+            max-width: 1200px;
+            margin: 0 auto; 
+        }
+
+        .accordion-content.collapsed {
+            max-height: 0; 
+        }
+
+        /* Table Styling */
+        .table-container {
+            padding: 20px;
+            background-color: #2a3c2d; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow-x: auto;
+            overflow-y: auto; 
+            max-height: 400px; 
+            scrollbar-width: none; 
+        }
+
+        /* Hide scrollbars in WebKit-based browsers (Chrome, Safari, Edge) */
+        .table-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        th, td {
+            padding: 10px; 
+            text-align: left;
+            font-size: 0.9rem; 
+            transition: all 0.3s ease; 
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        th {
+            background-color: #500973; 
+            color: #ffddff; 
+            font-size: 1rem; 
+            text-transform: uppercase;
+            cursor: pointer; 
+            position: relative;
+        }
+
+        th::after {
+            content: "▼"; 
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+            color: white;
+        }
+
+        th.collapsed::after {
+            content: "▶"; 
+        }
+
+        /* Collapsed column styles */
+        td.collapsed {
+            max-width: 0; 
+            padding: 0; 
+            overflow: hidden; 
+            white-space: nowrap;
+            font-size: 0; 
+        }
+
+        tr:nth-child(even) {
+            background-color: #34493b; 
+        }
+
+        tr:nth-child(odd) {
+            background-color: #2a3c2d; 
+        }
+
+        tr:hover {
+            background-color: #9e3ab7; 
+            color: white; 
+        }
+
+        td {
+            font-size: 0.9rem; 
+            color: #ffffff;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Gap Between Graphs */
+        .graph-gap {
+            margin: 20px 0; 
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .table-container {
+                padding: 10px;
+                max-height: 300px; 
+            }
+
+            th, td {
+                padding: 8px;
+                font-size: 0.8rem;
+            }
+
+            .accordion-button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Topbar with Navigation Buttons -->
+    <div class="topbar">
+        <a href="{{ url_for('home') }}">Return to Home</a>
+        <a href="{{ url_for('get_playlists') }}">Return to Playlists</a>
+    </div>
+
+    <!-- Accordion for Recommendations -->
+    <button class="accordion-button" onclick="toggleAccordion('recommendations')">Recommendations ▼</button>
+    <div class="accordion-content" id="recommendations">
+        <div class="table-container">
+            <table>
+                {{ recommended_tracks_info|safe }}
+            </table>
+        </div>
+    </div>
+
+    <!-- Gap Between Graphs -->
+    <div class="graph-gap"></div>
+
+    <!-- Accordion for Playlist Tracks -->
+    <button class="accordion-button" onclick="toggleAccordion('playlist')">Playlist Tracks ▼</button>
+    <div class="accordion-content" id="playlist">
+        {% if playlist_cover_image %}
+        <img src="{{ playlist_cover_image }}" alt="Playlist Cover" width="150" />
+        {% endif %}
+        <div class="table-container">
+            <table>
+                {{ playlist_tracks_info|safe }}
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Add accordion functionality for entire tables
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const button = content.previousElementSibling;
+
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                button.textContent = button.textContent.replace('▲', '▼');
+            } else {
+                content.classList.add('collapsed');
+                button.textContent = button.textContent.replace('▼', '▲');
+            }
+        }
+
+        // Add column-level collapsible functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const headers = document.querySelectorAll("th"); 
+
+            headers.forEach((header, index) => {
+                const originalText = header.textContent.trim(); 
+
+                header.addEventListener("click", () => {
+                    const rows = document.querySelectorAll("tr");
+                    const isCollapsed = header.classList.contains("collapsed");
+
+                    // Toggle collapsed state for header and corresponding column cells
+                    rows.forEach(row => {
+                        const cells = row.children;
+                        if (cells[index]) {
+                            cells[index].classList.toggle("collapsed", !isCollapsed);
+                        }
+                    });
+
+                    // Update header text and toggle the collapsed class
+                    if (isCollapsed) {
+                        header.textContent = originalText;
+                        header.classList.remove("collapsed");
+                    } else {
+                        header.textContent = "→"; 
+                        header.classList.add("collapsed");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 </html>
