@@ -10,77 +10,124 @@
         body {
             font-family: 'Orbitron', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #1f2f25; /* Dark background for contrast */
+            padding: 70px 0 0; 
+            background-color: #1f2f25; 
             color: white;
             text-align: center;
+            overflow-x: hidden; 
         }
 
         h1 {
-            color: #ffddff; /* Light purple for titles */
+            color: #ffddff; 
             margin-bottom: 20px;
         }
 
-        a {
-            color: #9e3ab7; /* Purple links */
+        /* Topbar Styling */
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1d2c24; 
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            z-index: 1000; 
+        }
+
+        .topbar a {
+            color: #ffddff;
             text-decoration: none;
             font-size: 1rem;
-            display: inline-block;
             background-color: #500973;
             padding: 10px 20px;
             border-radius: 5px;
-            margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
 
-        a:hover {
-            text-decoration: underline;
-            color: #c285dd; /* Lighter purple on hover */
+        .topbar a:hover {
+            background-color: #9e3ab7; 
         }
 
-        img {
-            margin: 20px auto;
-            border-radius: 10px;
-            border: 2px solid white;
+        /* Accordion Button Styling */
+        .accordion-button {
+            background-color: #500973;
+            color: #ffddff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
             display: block;
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto; 
+            text-align: left;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .accordion-button:hover {
+            background-color: #9e3ab7;
+        }
+
+        .accordion-content {
+            overflow: hidden;
+            max-height: 2000px; 
+            transition: max-height 0.3s ease;
+            width: 95%; 
+            max-width: 1200px;
+            margin: 0 auto; 
+        }
+
+        .accordion-content.collapsed {
+            max-height: 0; 
         }
 
         /* Table Styling */
         .table-container {
-            max-width: 90%; /* Limits table width */
-            margin: 20px auto;
             padding: 20px;
-            background-color: #2a3c2d; /* Slightly lighter dark green */
+            background-color: #2a3c2d; 
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            overflow-x: auto; /* Enable horizontal scrolling */
-            transform: scale(0.85); /* Scales the table to 85% of its original size */
-            transform-origin: center top; /* Keeps the scaling centered */
+            overflow-x: auto;
+            overflow-y: auto; 
+            max-height: 400px; 
+            scrollbar-width: none; 
+        }
+
+        /* Hide scrollbars in WebKit-based browsers (Chrome, Safari, Edge) */
+        .table-container::-webkit-scrollbar {
+            display: none;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 600px; /* Ensures table does not shrink too much */
+            font-family: 'Orbitron', sans-serif;
         }
 
         th, td {
-            padding: 15px;
+            padding: 10px; 
             text-align: left;
-            transition: all 0.3s ease; /* Smooth transitions */
+            font-size: 0.9rem; 
+            transition: all 0.3s ease; 
+            font-family: 'Orbitron', sans-serif;
         }
 
         th {
-            background-color: #500973; /* Dark purple for header */
-            color: #ffddff; /* Light purple text */
-            font-size: 1.2rem;
+            background-color: #500973; 
+            color: #ffddff; 
+            font-size: 1rem; 
             text-transform: uppercase;
-            cursor: pointer; /* Pointer cursor for collapsible columns */
+            cursor: pointer; 
             position: relative;
-            transition: all 0.3s ease; /* Smooth transitions */
         }
 
         th::after {
-            content: "▼"; /* Default arrow icon for expanded state */
+            content: "▼"; 
             position: absolute;
             right: 10px;
             top: 50%;
@@ -90,82 +137,115 @@
         }
 
         th.collapsed::after {
-            content: "▶"; /* Arrow pointing right for collapsed state */
+            content: "▶"; 
         }
 
         /* Collapsed column styles */
         td.collapsed {
-            max-width: 0; /* Shrinks the data cells to invisible */
-            padding: 0; /* Removes padding for collapsed columns */
-            overflow: hidden; /* Ensures content is not visible */
+            max-width: 0; 
+            padding: 0; 
+            overflow: hidden; 
             white-space: nowrap;
-            font-size: 0; /* Shrinks text size */
+            font-size: 0; 
         }
 
         tr:nth-child(even) {
-            background-color: #34493b; /* Darker alternating row color */
+            background-color: #34493b; 
         }
 
         tr:nth-child(odd) {
-            background-color: #2a3c2d; /* Default row color */
+            background-color: #2a3c2d; 
         }
 
         tr:hover {
-            background-color: #9e3ab7; /* Hover effect with purple */
-            color: white; /* Ensures text stays readable */
+            background-color: #9e3ab7; 
+            color: white; 
         }
 
         td {
-            font-size: 1rem;
+            font-size: 0.9rem; 
             color: #ffffff;
-            transition: all 0.3s ease; /* Smooth transitions */
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Gap Between Graphs */
+        .graph-gap {
+            margin: 20px 0; 
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .table-container {
                 padding: 10px;
-                transform: scale(1); /* Reset scale for smaller screens */
+                max-height: 300px; 
             }
 
             th, td {
-                padding: 10px;
-                font-size: 0.9rem;
+                padding: 8px;
+                font-size: 0.8rem;
+            }
+
+            .accordion-button {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Recommendations</h1>
-    <!-- Recommended Tracks Table -->
-    <div class="table-container">
-        <table>
-            {{ recommended_tracks_info|safe }}
-        </table>
+    <!-- Topbar with Navigation Buttons -->
+    <div class="topbar">
+        <a href="{{ url_for('home') }}">Return to Home</a>
+        <a href="{{ url_for('get_playlists') }}">Return to Playlists</a>
     </div>
 
-    <h1>Playlist Tracks</h1>
-    {% if playlist_cover_image %}
-    <img src="{{ playlist_cover_image }}" alt="Playlist Cover" width="150" />
-    {% endif %}
-
-    <!-- Playlist Tracks Table -->
-    <div class="table-container">
-        <table>
-            {{ playlist_tracks_info|safe }}
-        </table>
+    <!-- Accordion for Recommendations -->
+    <button class="accordion-button" onclick="toggleAccordion('recommendations')">Recommendations ▼</button>
+    <div class="accordion-content" id="recommendations">
+        <div class="table-container">
+            <table>
+                {{ recommended_tracks_info|safe }}
+            </table>
+        </div>
     </div>
 
-    <a href="{{ url_for('home') }}">Back to Home</a>
-    <a href="{{ url_for('get_playlists') }}">Back to Playlists</a>
+    <!-- Gap Between Graphs -->
+    <div class="graph-gap"></div>
+
+    <!-- Accordion for Playlist Tracks -->
+    <button class="accordion-button" onclick="toggleAccordion('playlist')">Playlist Tracks ▼</button>
+    <div class="accordion-content" id="playlist">
+        {% if playlist_cover_image %}
+        <img src="{{ playlist_cover_image }}" alt="Playlist Cover" width="150" />
+        {% endif %}
+        <div class="table-container">
+            <table>
+                {{ playlist_tracks_info|safe }}
+            </table>
+        </div>
+    </div>
 
     <script>
-        // Add accordion-like collapsible column functionality
+        // Add accordion functionality for entire tables
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const button = content.previousElementSibling;
+
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                button.textContent = button.textContent.replace('▲', '▼');
+            } else {
+                content.classList.add('collapsed');
+                button.textContent = button.textContent.replace('▼', '▲');
+            }
+        }
+
+        // Add column-level collapsible functionality
         document.addEventListener("DOMContentLoaded", () => {
-            const headers = document.querySelectorAll("th"); // Select all table headers
+            const headers = document.querySelectorAll("th"); 
 
             headers.forEach((header, index) => {
-                const originalText = header.textContent.trim(); // Store the original header text
+                const originalText = header.textContent.trim(); 
 
                 header.addEventListener("click", () => {
                     const rows = document.querySelectorAll("tr");
@@ -181,10 +261,10 @@
 
                     // Update header text and toggle the collapsed class
                     if (isCollapsed) {
-                        header.textContent = originalText; // Restore original text
+                        header.textContent = originalText;
                         header.classList.remove("collapsed");
                     } else {
-                        header.textContent = "→"; // Change to right-pointing arrow when collapsed
+                        header.textContent = "→"; 
                         header.classList.add("collapsed");
                     }
                 });
