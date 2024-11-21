@@ -1,0 +1,186 @@
+Name,Artist(s),Album,Acousticness,Danceability,Duration_ms,Energy,Instrumentalness,Liveness,Loudness,Speechiness,Tempo,Valance
+Borrowed Time (From Rick and Morty: Season 5),"Rick and Morty, Tennis",Borrowed Time (From Rick and Morty: Season 5),0.668,0.505,181507,0.389,0.00982,0.131,-6.973,0.0297,115.216,0.37
+Head Over Heels / Broken,Tears For Fears,Songs From The Big Chair,0.188,0.298,302120,0.704,0.000488,0.777,-9.905,0.0366,95.023,0.655
+Tin Man,America,Holiday,0.528,0.646,209867,0.531,0.0133,0.0836,-10.785,0.0671,172.02,0.655
+In The Air Tonight - 2015 Remastered,Phil Collins,Face Value (Deluxe Editon),0.551,0.446,336453,0.239,4.1e-06,0.0697,-13.945,0.0316,189.507,0.298
+Stairway to Heaven - Remaster,Led Zeppelin,Led Zeppelin IV (Deluxe Edition),0.58,0.338,482830,0.34,0.0032,0.116,-12.049,0.0339,82.433,0.197
+No Rain,Blind Melon,Blind Melon,0.619,0.389,217107,0.476,5.09e-05,0.255,-9.342,0.0316,148.117,0.566
+Closing Time,Semisonic,20th Century Masters: The Millennium Collection: Best Of Semisonic,0.0204,0.478,274160,0.854,1.21e-06,0.115,-5.454,0.0289,91.854,0.274
+Dracula From Houston,Butthole Surfers,Weird Revolution,0.00151,0.58,222707,0.925,0.0013,0.124,-3.904,0.0482,100.155,0.526
+Ruler of Everything,Tally Hall,Marvin's Marvelous Mechanical Museum,0.196,0.58,222107,0.791,0.00326,0.0793,-7.604,0.324,83.323,0.343
+Everlong,Foo Fighters,The Colour And The Shape,5.99e-05,0.413,250547,0.881,0.000308,0.0805,-5.541,0.0367,158.066,0.364
+Losing My Religion,R.E.M.,Out Of Time (25th Anniversary Edition),0.179,0.666,268427,0.855,1.2e-06,0.0987,-5.051,0.0295,125.639,0.803
+Tom's Diner,"Suzanne Vega, DNA",Tom's Album,0.0204,0.86,228307,0.439,0.0147,0.0465,-12.264,0.0495,99.144,0.725
+Ventura Highway,"America, George Martin",Homecoming,0.104,0.611,211680,0.761,0.0002,0.122,-5.929,0.0283,130.705,0.838
+Baba O'Riley,The Who,Who's Next (Deluxe Edition),0.313,0.489,300400,0.724,0.185,0.287,-8.367,0.0352,117.292,0.15
+Tiny Dancer,Elton John,Madman Across The Water,0.382,0.414,377093,0.428,0.000243,0.148,-11.097,0.0278,145.075,0.282
+The Less I Know The Better,Tame Impala,Currents,0.0115,0.64,216320,0.74,0.00678,0.167,-4.083,0.0284,116.879,0.785
+Clint Eastwood,Gorillaz,Gorillaz,0.0253,0.663,340920,0.694,0.0,0.0698,-8.627,0.171,167.953,0.525
+House Of The Rising Sun,The Animals,The Animals,0.000385,0.295,271280,0.584,0.218,0.0996,-6.696,0.0345,117.2,0.228
+How Soon Is Now? - 2011 Remaster,The Smiths,Hatful of Hollow,0.000854,0.398,408173,0.93,0.121,0.0874,-6.76,0.0615,190.818,0.725
+Dream On,Aerosmith,Aerosmith,0.388,0.307,266960,0.433,9.08e-05,0.332,-10.057,0.029,160.9,0.224
+Shout,Tears For Fears,Songs From The Big Chair,0.174,0.511,393667,0.942,1.87e-05,0.139,-10.407,0.0429,97.909,0.498
+Boulevard of Broken Dreams,Green Day,Greatest Hits: God's Favorite Band,0.00552,0.496,262333,0.682,2.94e-05,0.0589,-4.095,0.0294,167.06,0.474
+Roll The Bones,Rush,Roll The Bones,0.0218,0.656,330227,0.826,0.0862,0.0594,-9.692,0.0404,111.195,0.68
+Closer To The Heart,Rush,A Farewell To Kings,0.143,0.375,174920,0.807,2.06e-06,0.564,-9.224,0.0731,145.115,0.53
+Strange Magic,Electric Light Orchestra,The Essential Electric Light Orchestra,0.772,0.442,246053,0.327,0.0,0.325,-12.831,0.0267,95.394,0.318
+Outro,M83,"Hurry Up, We're Dreaming",0.0301,0.226,247027,0.261,0.0677,0.0628,-11.276,0.0339,108.915,0.084
+Midnight City,M83,"Hurry Up, We're Dreaming",0.0161,0.526,241440,0.712,0.0,0.179,-6.525,0.0356,105.009,0.32
+Bored To Death,blink-182,California,0.00575,0.502,235613,0.966,1.56e-06,0.117,-3.876,0.0946,159.948,0.638
+Don't Take The Money,Bleachers,Gone Now,0.000397,0.63,215547,0.885,1.37e-06,0.206,-5.674,0.0406,110.072,0.289
+You Can Call Me Al,Paul Simon,Graceland (25th Anniversary Deluxe Edition),0.182,0.776,280000,0.763,0.00647,0.077,-8.124,0.0534,128.433,0.82
+Pinch Me,Barenaked Ladies,Maroon,0.0151,0.68,285160,0.857,2.88e-05,0.056,-4.132,0.0373,95.349,0.794
+The Kids Aren't Alright,The Offspring,Americana,0.00599,0.52,179600,0.945,4.97e-05,0.0495,-4.197,0.0335,99.603,0.807
+Time to Pretend,MGMT,Oracular Spectacular,8.74e-05,0.438,261000,0.94,0.0777,0.3,-3.249,0.0452,100.99,0.421
+Alone Again (Naturally),Gilbert O'Sullivan,Back to Front,0.617,0.555,216840,0.521,0.00019,0.184,-6.784,0.0337,171.807,0.633
+Good Riddance (Time of Your Life),Green Day,Nimrod,0.183,0.475,153467,0.432,0.0,0.161,-7.844,0.0302,94.605,0.648
+I Ran,A Flock Of Seagulls,Edge Of The 80's,0.000466,0.525,220307,0.858,0.878,0.166,-4.927,0.0345,145.492,0.669
+The Middle,Jimmy Eat World,Bleed American (Deluxe Edition),0.0424,0.629,168253,0.897,0.0,0.263,-3.401,0.0483,161.944,0.93
+Crystals,Of Monsters and Men,Beneath The Skin,0.00202,0.581,243520,0.747,0.000449,0.109,-7.207,0.0303,132.195,0.325
+Mad World,"Gary Jules, Michael Andrews",Trading Snakeoil for Wolftickets,0.976,0.344,189507,0.0585,0.000362,0.103,-17.212,0.0373,174.149,0.323
+(Don't Fear) The Reaper,Blue Öyster Cult,Agents Of Fortune,0.0029,0.333,308120,0.927,0.000208,0.297,-8.55,0.0733,141.466,0.385
+Fireflies,Owl City,Ocean Eyes,0.0275,0.512,228347,0.662,0.0,0.118,-6.797,0.0439,180.114,0.472
+"Rocket Man (I Think It's Going To Be A Long, Long Time)",Elton John,Honky Chateau,0.433,0.601,281613,0.532,5.95e-06,0.0925,-9.119,0.0286,136.576,0.342
+Drops of Jupiter (Tell Me),Train,Drops Of Jupiter,0.153,0.481,259933,0.638,0.0,0.154,-5.862,0.0276,79.064,0.497
+Send Me on My Way,Rusted Root,Music From Party of Five,0.114,0.5,263333,0.681,4.01e-05,0.139,-9.556,0.0672,119.46,0.745
+Wonderwall (Remastered),Oasis,(What's The Story) Morning Glory? (Deluxe Edition) [Remastered],0.000453,0.372,258733,0.865,0.0,0.234,-4.918,0.0381,174.53,0.478
+Go Your Own Way - 2004 Remaster,Fleetwood Mac,Rumours (Super Deluxe),0.0167,0.586,223613,0.941,0.000776,0.068,-5.139,0.0375,135.448,0.831
+Happy Together,The Turtles,Happy Together,0.55,0.584,176293,0.367,1.38e-05,0.0818,-9.638,0.0328,120.175,0.588
+Some Nights,fun.,Some Nights,0.0178,0.672,277040,0.738,6.75e-05,0.0927,-7.045,0.0506,107.938,0.392
+We Are Young (feat. Janelle Monáe),"fun., Janelle Monáe",Some Nights,0.02,0.378,250627,0.638,7.66e-05,0.0849,-5.576,0.075,184.086,0.735
+In Your Eyes - 2012 Remaster,Peter Gabriel,So (2012 Remastered),0.0632,0.621,330373,0.645,9.63e-06,0.0703,-9.37,0.0352,89.284,0.63
+Hey There Delilah,Plain White T's,Hey There Delilah,0.819,0.527,233200,0.452,0.0,0.102,-7.844,0.0293,103.851,0.311
+The Other Side,Scissor Sisters,Ta Dah,0.124,0.659,262733,0.82,0.061,0.154,-5.736,0.0318,119.029,0.745
+Bohemian Rhapsody - Remastered 2011,Queen,Queen 40 Limited Edition Collector's Box Set,0.289,0.391,354320,0.402,0.0,0.243,-9.961,0.0539,143.879,0.228
+Secrets,OneRepublic,Waking Up (Deluxe),0.0717,0.516,224680,0.764,0.0,0.115,-6.223,0.0366,148.021,0.376
+Good Life,OneRepublic,Waking Up (Deluxe),0.0785,0.636,253307,0.694,0.0,0.121,-7.796,0.051,94.989,0.687
+Carry on Wayward Son,Kansas,Leftoverture (Expanded Edition),0.00321,0.482,323000,0.786,8.88e-05,0.446,-5.735,0.032,126.755,0.793
+All These Things That I've Done,The Killers,Hot Fuss,0.00156,0.557,301573,0.728,5.13e-06,0.118,-6.181,0.0405,118.241,0.216
+Chasing Cars,Snow Patrol,Eyes Open,0.209,0.563,267933,0.592,5.08e-05,0.132,-4.571,0.0276,104.016,0.136
+Bitter Sweet Symphony - Remastered 2016,The Verve,Urban Hymns (Remastered 2016),0.0335,0.356,357267,0.917,0.0,0.406,-6.006,0.0479,171.176,0.518
+Kids,MGMT,Oracular Spectacular,0.00076,0.451,302840,0.931,0.0049,0.361,-3.871,0.0719,122.961,0.172
+When You Were Young,The Killers,Sam's Town,0.000152,0.467,220427,0.988,0.0484,0.28,-3.313,0.112,130.433,0.321
+Major Tom (Coming Home),Peter Schilling,The Different Story (World Of Lust And Crime),0.153,0.787,301373,0.42,0.164,0.169,-14.32,0.0645,161.247,0.838
+Adventure of a Lifetime,Coldplay,A Head Full of Dreams,0.00205,0.638,263787,0.924,0.000175,0.149,-3.887,0.036,111.995,0.53
+Paradise,Coldplay,Mylo Xyloto,0.0509,0.449,278719,0.585,8.75e-05,0.0833,-6.761,0.0268,139.631,0.212
+Viva La Vida,Coldplay,Viva La Vida or Death and All His Friends,0.0954,0.486,242373,0.617,3.23e-06,0.109,-7.115,0.0287,138.015,0.417
+The Calling,"TheFatRat, Laura Brehm",The Calling,0.423,0.672,233591,0.504,0.00885,0.117,-8.284,0.0322,109.998,0.109
+Big Bad World One,Jonathan Coulton,Thing a Week Four,0.0353,0.539,170400,0.83,0.0,0.185,-6.642,0.0552,74.985,0.615
+Stressed Out,Twenty One Pilots,Blurryface,0.0462,0.734,202333,0.637,2.29e-05,0.0602,-5.677,0.141,169.977,0.648
+Do You Remember,Ra Ra Riot,The Orchard,0.0328,0.558,211653,0.665,1.27e-05,0.0992,-7.652,0.0386,145.977,0.753
+Boy,Ra Ra Riot,Boy,0.0364,0.579,190907,0.861,0.00796,0.403,-5.542,0.0467,161.959,0.78
+Dying Is Fine,Ra Ra Riot,The Rhumb Line,0.0632,0.479,231720,0.878,0.0761,0.251,-5.033,0.0817,155.969,0.501
+Jerk It Out,Caesars,Love For The Streets,0.0171,0.58,195667,0.981,1.07e-05,0.386,-2.603,0.06,134.007,0.861
+Dust in the Wind,Kansas,Point Of Know Return (Expanded Edition),0.367,0.475,206267,0.322,0.00056,0.11,-10.687,0.0283,93.503,0.387
+A Horse with No Name,"America, George Martin",America,0.687,0.653,252240,0.507,0.0147,0.155,-17.18,0.0534,123.188,0.831
+Come Sail Away,Styx,Gold,0.129,0.285,365000,0.562,1.29e-06,0.0987,-7.467,0.0306,147.696,0.123
+Everybody Wants To Rule The World,Tears For Fears,Shout: The Very Best Of Tears For Fears,0.38,0.687,247533,0.886,0.00646,0.0702,-8.219,0.0485,112.073,0.467
+Feel Good Inc.,Gorillaz,Demon Days,0.00836,0.818,222640,0.705,0.00233,0.613,-6.679,0.177,138.559,0.772
+Space Oddity - 2015 Remaster,David Bowie,David Bowie (aka Space Oddity) [2015 Remaster],0.0726,0.31,318027,0.403,9.27e-05,0.139,-13.664,0.0326,134.48,0.466
+Solsbury Hill,Peter Gabriel,Peter Gabriel 1: Car (Remastered),0.355,0.678,261560,0.631,0.000268,0.376,-8.624,0.0301,102.378,0.463
+Livin' Thing,Electric Light Orchestra,A New World Record,0.583,0.549,212307,0.651,0.0,0.121,-7.097,0.0323,122.818,0.368
+Piano Man,Billy Joel,Piano Man,0.618,0.334,336200,0.477,4.17e-06,0.312,-8.806,0.0276,179.239,0.405
+Island In The Sun,Weezer,Weezer,0.00719,0.654,200307,0.81,0.00251,0.165,-6.26,0.0288,114.622,0.661
+Under the Bridge,Red Hot Chili Peppers,Blood Sugar Sex Magik (Deluxe Edition),0.0576,0.559,264307,0.345,0.000105,0.141,-13.496,0.0459,84.581,0.458
+Free Bird,Lynyrd Skynyrd,Pronounced' Leh-'Nerd 'Skin-'Nerd,0.0742,0.249,547107,0.834,9.69e-05,0.0924,-8.21,0.0574,118.222,0.337
+Starman - 2012 Remaster,David Bowie,The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster),0.166,0.486,254293,0.449,2.23e-06,0.54,-10.298,0.0267,100.456,0.549
+Easy Lover,"Philip Bailey, Phil Collins",Chinese Wall (Expanded Edition),0.105,0.74,305867,0.923,0.000163,0.0825,-5.082,0.0369,128.871,0.93
+Hidden In the Sand,Tally Hall,Marvin's Marvelous Mechanical Museum,0.514,0.547,112960,0.287,0.774,0.119,-12.28,0.149,120.792,0.177
+Supersonic Rocket Ship,The Kinks,Everybody's in Show-Biz,0.855,0.612,211578,0.42,0.0166,0.1,-15.645,0.0443,150.125,0.874
+Cold as Ice,Foreigner,Foreigner (Expanded),0.0264,0.562,200213,0.609,0.0,0.17,-7.063,0.0271,130.753,0.512
+Have You Ever Seen The Rain,Creedence Clearwater Revival,Pendulum,0.0936,0.743,160333,0.47,3.15e-05,0.186,-13.154,0.029,116.122,0.89
+"Another Brick in the Wall, Pt. 2",Pink Floyd,The Wall,0.0782,0.693,238747,0.394,0.000694,0.247,-15.882,0.0428,104.114,0.721
+Comfortably Numb,Pink Floyd,The Wall,0.15,0.472,382297,0.366,0.312,0.0837,-12.595,0.0286,127.163,0.171
+The Chain - 2004 Remaster,Fleetwood Mac,Rumours (Super Deluxe),0.009,0.545,270213,0.67,0.000822,0.0451,-8.81,0.0496,151.553,0.481
+Time in a Bottle,Jim Croce,You Don't Mess Around With Jim,0.848,0.544,146176,0.265,0.0,0.196,-11.952,0.035,133.837,0.7
+Circumstances,Rush,Hemispheres (40th Anniversary),0.0137,0.418,224413,0.728,1.16e-05,0.368,-11.514,0.0332,125.253,0.646
+Where Is My Mind? - 2007 Remaster,Pixies,Surfer Rosa (2007 Remaster),0.0204,0.519,234973,0.441,0.000453,0.076,-14.178,0.0353,81.334,0.25
+Take It Easy - 2013 Remaster,Eagles,Eagles (2013 Remaster),0.343,0.575,211578,0.67,4.95e-06,0.129,-10.39,0.0318,139.191,0.74
+Shimmer,Fuel,Sunburn,0.00236,0.48,214107,0.795,0.0,0.189,-6.408,0.0421,114.674,0.432
+Light My Love,Greta Van Fleet,The Battle at Garden’s Gate,0.1,0.374,270887,0.778,0.199,0.107,-4.466,0.0363,133.85,0.484
+Time - 2013 Remaster,David Bowie,Aladdin Sane (2013 Remaster),0.192,0.33,315855,0.651,2.68e-06,0.105,-8.731,0.0398,145.178,0.37
+'92: Weird Diseases,The Magnetic Fields,50 Song Memoir,0.7,0.57,190413,0.92,1.46e-06,0.239,-4.327,0.0801,121.624,0.791
+California Dreamin' - Single Version,The Mamas & The Papas,If You Can Believe Your Eyes & Ears,0.352,0.552,162373,0.608,0.0,0.0533,-9.786,0.0345,112.367,0.637
+All My Friends,LCD Soundsystem,Sound of Silver,0.148,0.701,462267,0.788,0.625,0.0977,-5.611,0.0425,142.584,0.795
+Race for the Prize - 2017 Remaster,The Flaming Lips,The Soft Bulletin,4.56e-05,0.326,258912,0.841,0.028,0.251,-7.14,0.0858,130.723,0.449
+Float On,Modest Mouse,Good News For People Who Love Bad News,0.013,0.649,208467,0.888,2.23e-06,0.0888,-4.807,0.0293,100.975,0.553
+Baby Blue - Remastered 2010,Badfinger,Straight Up (Remastered 2010 / Deluxe Edition),0.0189,0.623,217347,0.876,0.0134,0.0728,-7.788,0.066,124.431,0.515
+Do You Realize??,The Flaming Lips,Yoshimi Battles the Pink Robots,0.006,0.464,213173,0.797,0.000304,0.392,-5.244,0.0333,129.964,0.547
+I Can Change,LCD Soundsystem,This Is Happening,0.00215,0.644,352004,0.73,0.00178,0.233,-6.565,0.0287,116.981,0.695
+Common People - Full Length Version,Pulp,Different Class,0.0057,0.314,351627,0.797,5.59e-05,0.0718,-9.026,0.038,145.393,0.569
+Nuclear Fusion,King Gizzard & The Lizard Wizard,Flying Microtonal Banana,0.343,0.39,255453,0.78,0.801,0.165,-6.255,0.0411,86.363,0.586
+Rain,Dragon,Body And The Beat,0.0464,0.596,218853,0.462,0.000571,0.0788,-12.598,0.0315,156.894,0.609
+Lazy Eye,Silversun Pickups,Carnavas,0.0409,0.635,354347,0.836,0.726,0.116,-5.044,0.0468,127.39,0.256
+Flowers On the Wall,The Statler Brothers,Flowers On The Wall: The Essential Statler Brothers 1964-1969,0.792,0.784,138800,0.451,4.09e-05,0.115,-11.225,0.0723,100.303,0.78
+Once in a Lifetime,Talking Heads,Remain in Light,0.0623,0.646,259600,0.88,0.157,0.355,-7.753,0.0637,116.916,0.802
+Crazy,Gnarls Barkley,St. Elsewhere,0.053,0.866,177933,0.537,0.0156,0.0866,-5.786,0.0335,111.987,0.643
+Golden Skans,Klaxons,Myths Of The Near Future,0.000418,0.463,165120,0.836,7.38e-06,0.25,-2.776,0.0381,141.955,0.713
+5 Years Time,Noah And The Whale,"Peaceful, The World Lays Me Down",0.4,0.804,214933,0.552,0.0,0.1,-7.108,0.113,121.996,0.748
+The High Road,Broken Bells,Broken Bells,0.0672,0.61,232200,0.638,6.59e-06,0.283,-6.574,0.0238,79.955,0.603
+New Slang - 2021 Remaster,The Shins,"Oh, Inverted World (20th Anniversary Remaster)",0.753,0.67,230867,0.403,0.0903,0.0858,-10.623,0.031,129.984,0.622
+Minimum Brain Size,King Gizzard & The Lizard Wizard,K.G.,0.0737,0.552,258674,0.785,0.748,0.0744,-8.689,0.039,179.954,0.855
+Above the Sunset,MacGregor Burns,Above the Sunset,0.454,0.716,177522,0.526,1.15e-06,0.113,-7.875,0.0365,124.02,0.578
+No Aloha,The Breeders,Last Splash,0.0798,0.291,127227,0.536,0.269,0.1,-9.166,0.0321,107.41,0.448
+White Room,Cream,Wheels Of Fire,0.191,0.553,298333,0.576,0.00664,0.0365,-13.458,0.0304,109.827,0.457
+Daydream In Blue,I Monster,Neveroddoreven,0.0151,0.547,223667,0.508,0.00116,0.116,-6.301,0.0273,153.822,0.382
+Naomi,Neutral Milk Hotel,On Avery Island,0.02,0.114,293067,0.481,3.61e-06,0.253,-11.712,0.0367,184.62,0.317
+"Holland, 1945",Neutral Milk Hotel,In the Aeroplane Over the Sea,0.0399,0.0621,192533,0.887,0.000156,0.619,-4.305,0.0632,198.441,0.48
+Two-Headed Boy,Neutral Milk Hotel,In the Aeroplane Over the Sea,0.705,0.342,266107,0.613,0.0,0.14,-4.084,0.0311,145.84,0.267
+Extreme Ways,Moby,18,0.00106,0.504,237640,0.777,0.00109,0.12,-7.916,0.0583,100.006,0.549
+Young Folks,Peter Bjorn and John,Writer's Block,0.0164,0.699,276693,0.812,0.000763,0.105,-6.005,0.0377,138.185,0.662
+Only Shallow,my bloody valentine,Loveless,0.000377,0.138,257520,0.691,0.786,0.0895,-7.976,0.0443,170.342,0.36
+Where You'll Find Me Now,Neutral Milk Hotel,On Avery Island,0.0454,0.176,244067,0.327,0.0412,0.472,-16.0,0.0327,93.676,0.148
+Panic Switch,Silversun Pickups,Swoon,0.000202,0.163,343907,0.885,0.0121,0.228,-4.623,0.0725,198.556,0.549
+Pepper,Butthole Surfers,Electriclarryland,0.00589,0.631,297267,0.804,0.00116,0.16,-5.492,0.166,79.898,0.671
+Avant Gardener,Courtney Barnett,The Double EP: A Sea of Split Peas,0.00149,0.443,312227,0.737,0.0032,0.121,-4.509,0.0293,115.277,0.746
+Jet Fighter,Butthole Surfers,Weird Revolution,0.0173,0.577,177573,0.933,2.91e-05,0.237,-5.354,0.0624,100.034,0.346
+I Am Steve,Hey Steve,Steve by Steve,0.118,0.64,205926,0.845,1.19e-06,0.0582,-5.687,0.0637,152.052,0.924
+Sometimes Jacks Rule the Realm,311,Evolver,0.0672,0.408,300880,0.599,0.00686,0.152,-9.467,0.0281,128.279,0.352
+Exactly Where I'm At,Ween,White Pepper,0.00892,0.565,271133,0.753,0.718,0.145,-6.294,0.0346,114.006,0.824
+Fight Test,The Flaming Lips,Yoshimi Battles the Pink Robots,0.0404,0.49,256720,0.985,1.77e-05,0.304,-2.386,0.0639,82.043,0.886
+I Just Threw Out The Love Of My Dreams,Weezer,Pinkerton - Deluxe Edition,0.00176,0.413,157960,0.967,1.09e-06,0.101,-3.96,0.136,130.451,0.279
+Falling Out,Ween,White Pepper,0.0206,0.4,148067,0.88,0.0348,0.259,-5.19,0.0652,171.88,0.834
+Gardenhead / Leave Me Alone,Neutral Milk Hotel,On Avery Island,0.00454,0.419,193973,0.62,0.000156,0.466,-9.773,0.0324,104.179,0.309
+Game Of Pricks,Guided By Voices,Alien Lanes,0.248,0.368,93307,0.966,0.663,0.529,-6.984,0.073,122.243,0.323
+Time Trap,Built To Spill,Keep It like a Secret,0.00067,0.367,322400,0.512,0.547,0.23,-6.89,0.0282,133.496,0.45
+When You Sleep,my bloody valentine,Loveless,0.000295,0.4,251933,0.82,0.79,0.236,-12.281,0.0466,128.894,0.135
+Summertime Clothes,Animal Collective,Merriweather Post Pavilion,0.00164,0.491,274213,0.871,0.0,0.361,-5.564,0.0969,135.996,0.322
+Incinerate,Sonic Youth,Rather Ripped,0.0794,0.446,295813,0.866,0.543,0.137,-8.016,0.0342,152.172,0.455
+Adult Diversion,Alvvays,Alvvays,0.0355,0.328,207640,0.948,0.515,0.126,-4.355,0.071,177.329,0.469
+I Don't Want to Get Over You,The Magnetic Fields,69 Love Songs,0.0183,0.47,142600,0.867,0.00283,0.117,-8.019,0.0885,120.407,0.265
+Final Days,Michael Kiwanuka,KIWANUKA,0.442,0.602,250933,0.776,0.168,0.577,-6.741,0.0438,110.887,0.419
+Side By Side,Crumb,AMAMA,0.718,0.53,187333,0.796,0.917,0.133,-8.579,0.0493,142.016,0.456
+Cato As A Pun,of Montreal,"Hissing Fauna, Are You The Destroyer?",0.00112,0.41,182600,0.846,0.00468,0.306,-4.969,0.042,199.965,0.523
+Bed,Cende,#1 Hit Single,0.00748,0.381,170585,0.921,0.00295,0.138,-4.628,0.0398,160.629,0.707
+The Trap,Tally Hall,Good & Evil,0.0827,0.311,271533,0.734,1.29e-06,0.114,-7.03,0.0556,176.441,0.24
+Helena Beat,Foster The People,Torches,0.0127,0.67,276173,0.876,0.00302,0.109,-4.905,0.0536,126.968,0.736
+The Good Life,Weezer,Pinkerton - Deluxe Edition,0.154,0.532,256987,0.899,0.0,0.332,-4.014,0.0428,135.755,0.626
+Birds Dont Sing,TV Girl,French Exit,0.016,0.605,209347,0.942,0.0,0.137,-4.549,0.0655,106.562,0.8
+Believe,The Bravery,The Sun And The Moon,0.00501,0.385,226347,0.949,2.13e-06,0.113,-3.369,0.0459,166.137,0.517
+Pink Triangle,Weezer,Pinkerton,0.0118,0.282,238600,0.894,0.0,0.347,-4.834,0.0822,118.809,0.466
+Subdivisions,Rush,Signals,0.047,0.513,334000,0.84,0.0419,0.12,-9.272,0.0365,133.272,0.451
+Evil,Interpol,Antics,0.00135,0.489,215827,0.769,0.56,0.0727,-3.524,0.038,128.985,0.637
+Gimme Sympathy,Metric,Fantasies,0.0093,0.452,234587,0.885,0.000945,0.113,-6.159,0.0806,139.021,0.114
+Tire Swing,Kimya Dawson,Remember That I Love You,0.841,0.513,188280,0.221,5.53e-05,0.121,-13.239,0.0792,165.885,0.391
+Mail From the River,Wang Wen,Invisible City,0.252,0.611,377490,0.449,0.828,0.104,-12.696,0.034,122.984,0.189
+Stone Scissors,Wang Wen,Invisible City,0.0939,0.426,631700,0.376,0.835,0.0695,-13.388,0.0299,92.969,0.109
+Before,Contriva,Separate Chambers,0.604,0.675,251853,0.743,0.919,0.274,-7.35,0.0327,130.028,0.517
+Your Graduation,Modern Baseball,You're Gonna Miss It All,0.001,0.395,163760,0.902,0.0,0.327,-5.808,0.177,184.737,0.632
+Help I'm Alive,Metric,Fantasies,0.00826,0.57,286013,0.884,0.00322,0.364,-4.55,0.0601,118.485,0.405
+Changing,The Airborne Toxic Event,All At Once,0.0186,0.613,200053,0.913,0.0,0.084,-4.26,0.0545,102.524,0.641
+Satellite,Guster,Ganging up on the Sun,0.0035,0.545,273160,0.747,0.0525,0.118,-6.304,0.0288,131.936,0.641
+Keep It Warm,Flo & Eddie,Moving Targets,0.327,0.707,256533,0.405,0.0,0.144,-9.044,0.0261,106.638,0.518
+Silver Soul,Beach House,Teen Dream,0.467,0.356,298680,0.67,0.000106,0.288,-5.825,0.0324,135.032,0.117
+A Beginner's Guide to Destroying the Moon,Foster The People,Supermodel,0.000257,0.515,279680,0.913,0.00174,0.284,-4.345,0.0524,119.989,0.266
+Slow Jam 1,King Gizzard & The Lizard Wizard,I'm In Your Mind Fuzz,0.353,0.422,174564,0.732,0.808,0.365,-7.762,0.0892,175.43,0.734
+Interior People,King Gizzard & The Lizard Wizard,Butterfly 3000,0.223,0.64,315133,0.847,0.00274,0.459,-8.103,0.0415,156.015,0.481
+Raw Feel,King Gizzard & The Lizard Wizard,Flight b741,0.00859,0.504,256953,0.903,0.0,0.633,-6.243,0.129,96.009,0.645
+Real's Not Real,King Gizzard & The Lizard Wizard,Fishing for Fishies,0.00172,0.297,220840,0.762,0.555,0.408,-6.937,0.0428,159.685,0.592
+Someday Soon,Harlem,Hippies,0.121,0.339,159773,0.919,0.0215,0.065,-4.221,0.0409,145.413,0.552
+Whirring,The Joy Formidable,The Big Roar,0.000129,0.335,407160,0.968,0.288,0.341,-3.775,0.0505,145.061,0.372
+Future Me Hates Me,The Beths,Future Me Hates Me,1.95e-05,0.476,245813,0.774,0.00163,0.128,-7.003,0.0308,137.079,0.581
+Toca La Guitarra,Professor Caveman,Vol. 2,0.0435,0.418,274769,0.866,0.000499,0.318,-6.243,0.13,131.042,0.533
+Borrowed Time,Parquet Courts,Light Up Gold,0.0459,0.4,152040,0.723,0.828,0.549,-7.233,0.0311,92.301,0.799
+Sad Pilot,King Gizzard & The Lizard Wizard,Flight b741,0.0531,0.454,251544,0.827,0.0,0.068,-5.527,0.158,152.38,0.849
+Dreams,King Gizzard & The Lizard Wizard,Butterfly 3000,0.487,0.681,244453,0.875,0.557,0.192,-8.151,0.0308,142.011,0.854
+On Melancholy Hill,Gorillaz,Plastic Beach,1.51e-05,0.689,233867,0.739,0.509,0.064,-5.81,0.026,120.423,0.578

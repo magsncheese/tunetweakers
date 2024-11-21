@@ -1,0 +1,11 @@
+Name,Artist(s),Album,Acousticness,Danceability,Duration_ms,Energy,Instrumentalness,Liveness,Loudness,Speechiness,Tempo,Valance
+Bodies,Drowning Pool,Sinner,0.00347,0.656,201960,0.932,0.00147,0.144,-3.405,0.0708,130.936,0.544
+Gondii,King Gizzard & The Lizard Wizard,Changes,0.00445,0.628,296980,0.944,0.0101,0.232,-4.469,0.0445,157.017,0.472
+Change Of Ideas,Bad Religion,No Control,0.00456,0.408,55307,0.941,0.0,0.315,-2.556,0.105,145.408,0.789
+Little Dark Age,MGMT,Little Dark Age,0.0102,0.705,299960,0.712,0.000855,0.1,-6.156,0.0385,97.512,0.62
+Before the Water Gets Too High,Parquet Courts,Wide Awake!,0.0735,0.504,245400,0.786,0.141,0.349,-4.438,0.0312,149.99,0.583
+Baby Bird,Whores,Clean,4.55e-05,0.273,222021,0.946,0.885,0.692,-4.913,0.174,152.602,0.355
+The Hardest Button to Button,The White Stripes,Elephant,0.00666,0.694,212888,0.515,0.622,0.0884,-8.663,0.0736,128.246,0.566
+Modern Jesus,Portugal. The Man,Evil Friends,0.133,0.627,194053,0.633,7.07e-05,0.216,-7.41,0.0305,85.999,0.763
+How Can I Thank You Enough?,Pipe-eye,Laugh About Life,0.196,0.504,227359,0.857,0.896,0.311,-3.838,0.0312,155.316,0.808
+Zero,Yeah Yeah Yeahs,It's Blitz!,0.00113,0.504,265787,0.947,0.313,0.383,-4.11,0.106,124.013,0.147

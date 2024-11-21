@@ -1,0 +1,115 @@
+Name,Artist(s),Album,Acousticness,Danceability,Duration_ms,Energy,Instrumentalness,Liveness,Loudness,Speechiness,Tempo,Valance
+Propane Nightmares,Pendulum,In Silico,0.000262,0.356,313347,0.966,0.148,0.192,-4.13,0.0825,173.992,0.215
+Slam,Pendulum,Hold Your Colour,3.04e-05,0.428,344973,0.982,0.822,0.322,-4.104,0.0477,173.998,0.3
+Live And Let Die,Guns N' Roses,Use Your Illusion I,0.0106,0.266,182733,0.778,0.113,0.12,-8.671,0.0624,151.244,0.262
+Nightrain,Guns N' Roses,Appetite For Destruction,0.107,0.4,266173,0.992,0.0117,0.179,-6.995,0.0725,149.412,0.243
+"You're Gonna Go Far, Kid",The Offspring,"Rise And Fall, Rage And Grace",0.00428,0.55,177827,0.917,0.0,0.197,-3.159,0.0638,126.115,0.601
+Pork And Beans,Weezer,Weezer,0.0109,0.599,189400,0.624,8.06e-06,0.158,-6.622,0.0339,119.838,0.706
+Say It Ain't So,Weezer,Weezer (Deluxe Edition),0.00328,0.635,256880,0.435,6.78e-06,0.071,-7.521,0.031,76.098,0.459
+BURN IT DOWN,Linkin Park,LIVING THINGS,0.0143,0.585,230253,0.972,0.0,0.0707,-4.45,0.0534,110.006,0.585
+Slayed,Overseer,Wreckage,0.0346,0.655,287813,0.899,0.0122,0.0774,-8.374,0.157,170.018,0.517
+American Idiot,Green Day,American Idiot,2.64e-05,0.38,176346,0.988,7.86e-05,0.368,-2.042,0.0639,186.113,0.769
+Welcome To The Jungle,Guns N' Roses,Appetite For Destruction,0.0326,0.445,273600,0.955,0.284,0.317,-8.027,0.0856,123.343,0.336
+Joker And The Thief,Wolfmother,Wolfmother,0.0452,0.264,280467,0.78,0.0222,0.376,-2.741,0.0517,155.376,0.456
+The Devil Went Down to Georgia,The Charlie Daniels Band,Million Mile Reflections,0.131,0.517,215067,0.535,0.0,0.085,-12.027,0.0494,135.087,0.933
+Carry on Wayward Son,Kansas,Leftoverture (Expanded Edition),0.00321,0.482,323000,0.786,8.88e-05,0.446,-5.735,0.032,126.755,0.793
+Through the Fire and Flames,DragonForce,Inhuman Rampage,0.00176,0.113,441560,0.951,0.00718,0.334,-4.743,0.129,200.024,0.139
+Granite,Pendulum,In Silico,1.35e-05,0.392,283467,0.925,0.703,0.356,-6.349,0.0462,174.089,0.2
+Crazy Train,Ozzy Osbourne,Blizzard of Ozz (Expanded Edition),0.36,0.453,296200,0.905,0.000569,0.26,-4.001,0.115,137.571,0.474
+Know Your Enemy,Green Day,21st Century Breakdown,0.0016,0.56,190987,0.958,4.96e-05,0.0643,-3.245,0.0412,129.984,0.961
+The Phoenix,Fall Out Boy,Save Rock And Roll,0.000557,0.561,244960,0.964,1.46e-06,0.579,-2.993,0.0719,138.064,0.411
+Cum on Feel the Noize,Quiet Riot,Metal Health,0.00719,0.409,290960,0.92,0.00105,0.0823,-5.439,0.12,145.085,0.37
+I Wanna Rock,Twisted Sister,Stay Hungry,0.00512,0.504,179760,0.911,0.0123,0.355,-2.97,0.0738,106.244,0.671
+Lonely Boy,The Black Keys,El Camino,0.00417,0.356,193653,0.872,0.00975,0.0997,-7.837,0.068,166.3,0.607
+Time to Pretend,MGMT,Oracular Spectacular,8.74e-05,0.438,261000,0.94,0.0777,0.3,-3.249,0.0452,100.99,0.421
+The Anthem,Good Charlotte,The Young and The Hopeless,0.00666,0.494,175093,0.939,0.0,0.139,-3.127,0.126,177.751,0.893
+The Kids Aren't Alright,The Offspring,Americana,0.00599,0.52,179600,0.945,4.97e-05,0.0495,-4.197,0.0335,99.603,0.807
+Outrage,Capital Lights,This Is An Outrage!,0.00665,0.478,229867,0.855,0.0,0.492,-4.881,0.0333,164.916,0.619
+Bang Bang,Green Day,Revolution Radio,0.000326,0.499,205440,0.958,2.19e-06,0.432,-5.417,0.0898,127.491,0.359
+Bored To Death,blink-182,California,0.00575,0.502,235613,0.966,1.56e-06,0.117,-3.876,0.0946,159.948,0.638
+Tom Sawyer,Rush,Moving Pictures (2011 Remaster),0.00146,0.53,276973,0.9,0.0189,0.0407,-7.233,0.0371,87.476,0.652
+Test For Echo,Rush,Test For Echo,0.000415,0.549,355920,0.829,0.0163,0.138,-10.37,0.0334,130.246,0.566
+Pump It,Black Eyed Peas,Monkey Business,0.0093,0.649,213067,0.931,0.0,0.751,-3.15,0.181,153.645,0.744
+Shout,Tears For Fears,Songs From The Big Chair,0.174,0.511,393667,0.942,1.87e-05,0.139,-10.407,0.0429,97.909,0.498
+Uprising,Muse,The Resistance,0.000202,0.602,304840,0.905,0.064,0.117,-4.046,0.0775,128.019,0.411
+Fuck the Fire Department,Vincent E. L.,Fuck the Fire Department,0.000338,0.674,226659,0.87,4.53e-05,0.395,-7.787,0.113,100.036,0.686
+Enter Sandman,Metallica,Metallica,0.00206,0.579,331573,0.824,0.00903,0.059,-8.71,0.03,123.331,0.635
+Tom Tom,Holy Fuck,Congrats,0.000345,0.615,227720,0.563,0.927,0.113,-7.871,0.0406,137.077,0.243
+Gold on the Ceiling,The Black Keys,El Camino,0.00772,0.505,224333,0.833,7.9e-05,0.069,-4.632,0.0475,130.121,0.565
+"Paint It, Black",The Rolling Stones,Aftermath,0.0493,0.464,202267,0.795,0.00244,0.399,-9.267,0.0926,158.691,0.612
+Take Me Out,Franz Ferdinand,Franz Ferdinand,0.000423,0.278,237027,0.676,0.000899,0.136,-8.821,0.0371,104.545,0.494
+Chelsea Dagger,The Fratellis,Costello Music,0.0491,0.511,215307,0.815,0.0,0.0826,-3.14,0.144,154.514,0.586
+Smells Like Teen Spirit,Nirvana,Nevermind (Remastered),2.55e-05,0.502,301920,0.912,0.000173,0.106,-4.556,0.0564,116.761,0.72
+Zombies Ate My Neighbors,Single File,No More Sad Face,0.00054,0.547,181787,0.938,0.0,0.278,-4.859,0.0625,104.015,0.488
+Hash Pipe,Weezer,Weezer,0.000123,0.578,186533,0.883,0.459,0.284,-6.354,0.0439,125.603,0.627
+Buddy Holly,Weezer,Weezer,0.00271,0.556,159227,0.92,0.00021,0.117,-4.606,0.0367,121.138,0.771
+Cult of Personality,Living Colour,Vivid (Expanded Edition),0.00164,0.504,294827,0.918,2.12e-05,0.78,-3.463,0.0517,92.031,0.539
+Wave Motion Gun,Marcy Playground,Shapeshifter,0.198,0.686,225627,0.71,4.31e-06,0.382,-5.094,0.0365,112.203,0.74
+Turn the Lights Off,Tally Hall,Good & Evil,0.137,0.392,176627,0.702,0.0,0.109,-6.509,0.0848,188.606,0.771
+Free Bird,Lynyrd Skynyrd,Pronounced' Leh-'Nerd 'Skin-'Nerd,0.0742,0.249,547107,0.834,9.69e-05,0.0924,-8.21,0.0574,118.222,0.337
+Immigrant Song - Remaster,Led Zeppelin,Led Zeppelin III (Remaster),0.013,0.564,146250,0.932,0.169,0.349,-10.068,0.0554,112.937,0.619
+We're Not Gonna Take It,Twisted Sister,Stay Hungry,0.0127,0.502,219667,0.924,0.0,0.162,-6.299,0.0503,149.186,0.922
+Tommy-Gun,Royal Republic,We Are The Royal,4.14e-05,0.545,152648,0.882,0.478,0.0423,-4.114,0.0582,147.973,0.694
+Song 2 - 2012 Remaster,Blur,Blur (Special Edition),0.00178,0.674,121160,0.789,0.00708,0.0753,-6.903,0.0676,129.802,0.918
+Circumstances,Rush,Hemispheres (40th Anniversary),0.0137,0.418,224413,0.728,1.16e-05,0.368,-11.514,0.0332,125.253,0.646
+Who Needs You,The Orwells,Disgraceland,1.37e-05,0.3,199147,0.88,0.0273,0.0746,-4.573,0.0465,207.92,0.563
+Where Is My Mind? - 2007 Remaster,Pixies,Surfer Rosa (2007 Remaster),0.0204,0.519,234973,0.441,0.000453,0.076,-14.178,0.0353,81.334,0.25
+Crookedile,King Gizzard & The Lizard Wizard,Willoughby's Beach,0.000104,0.356,150413,0.91,6.24e-05,0.813,-4.54,0.0414,143.014,0.445
+Robot Stop,King Gizzard & The Lizard Wizard,Nonagon Infinity,0.00565,0.465,322171,0.988,0.198,0.86,-5.301,0.11,97.92,0.315
+I'm In Your Mind,King Gizzard & The Lizard Wizard,I'm In Your Mind Fuzz,0.00595,0.274,213590,0.776,0.809,0.597,-5.63,0.06,93.378,0.408
+Crumbling Castle,King Gizzard & The Lizard Wizard,Polygondwanaland,0.147,0.359,644256,0.727,0.0299,0.0711,-7.252,0.0433,97.659,0.578
+Black Tooth,King Gizzard & The Lizard Wizard,Willoughby's Beach,0.000221,0.273,150720,0.874,5.63e-05,0.186,-5.442,0.047,99.429,0.565
+Planet B,King Gizzard & The Lizard Wizard,Infest The Rats' Nest,0.00185,0.353,236440,0.921,0.293,0.121,-5.289,0.0557,92.377,0.244
+Evil Death Roll,King Gizzard & The Lizard Wizard,Nonagon Infinity,0.00682,0.273,434172,0.974,0.843,0.348,-5.028,0.124,99.965,0.275
+You,Bad Religion,No Control,0.000653,0.319,126520,0.995,0.0,0.274,-2.94,0.0848,155.232,0.334
+Self-Immolate,King Gizzard & The Lizard Wizard,Infest The Rats' Nest,0.00018,0.307,268520,0.897,0.0126,0.0873,-6.491,0.216,158.925,0.175
+Holiday in Cambodia,Dead Kennedys,Give Me Convenience or Give Me Death,0.00344,0.133,224867,0.927,0.00044,0.0915,-5.371,0.0741,197.708,0.5
+The Witch,Vincas,Phantasma,0.0107,0.571,300528,0.73,0.818,0.182,-8.716,0.0354,128.15,0.502
+Miss Alissa,Eagles Of Death Metal,Peace Love Death Metal,0.805,0.55,158600,0.991,0.0,0.197,-3.704,0.12,172.389,0.882
+Drunken Lullabies,Flogging Molly,Drunken Lullabies,0.00152,0.386,230640,0.966,0.0248,0.0791,-4.258,0.0716,155.994,0.862
+Mississippi Queen,Mountain,Drivin' South: Southern Rockin' Smash Hits,0.13,0.479,147827,0.832,2.83e-05,0.0459,-4.746,0.145,140.41,0.584
+Sabotage,Beastie Boys,Ill Communication,0.032,0.324,178440,0.938,0.0321,0.0961,-7.332,0.102,168.131,0.543
+Supreme Ascendancy,King Gizzard & The Lizard Wizard,L.W.,0.00288,0.567,219957,0.929,0.615,0.114,-5.901,0.0536,139.999,0.714
+The Geeks Were Right,The Faint,Fasciinatiion,0.004,0.737,176240,0.666,6.55e-05,0.391,-6.258,0.0322,131.011,0.962
+Cubensis Lenses,Psychedelic Porn Crumpets,"High Visceral, Pt. 1",5.79e-05,0.407,343293,0.946,0.187,0.422,-5.753,0.05,155.092,0.71
+Hymn For A Droid,Psychedelic Porn Crumpets,And Now For The Whatchamacallit,2.99e-05,0.394,207453,0.906,0.345,0.318,-4.611,0.0602,140.042,0.255
+Brianstorm,Arctic Monkeys,Favourite Worst Nightmare (Standard Version),8.39e-05,0.421,170253,0.98,0.00125,0.237,-4.229,0.212,165.193,0.435
+You've Passed,Neutral Milk Hotel,On Avery Island,0.0625,0.501,173973,0.336,0.077,0.292,-14.373,0.0319,119.19,0.0383
+"Holland, 1945",Neutral Milk Hotel,In the Aeroplane Over the Sea,0.0399,0.0621,192533,0.887,0.000156,0.619,-4.305,0.0632,198.441,0.48
+Broken Boy,Cage The Elephant,Social Cues,0.0018,0.52,163200,0.931,0.000306,0.115,-3.051,0.0969,166.018,0.557
+Beat the Devil's Tattoo,Black Rebel Motorcycle Club,Beat the Devil's Tattoo,0.42,0.521,225760,0.921,0.0207,0.175,-2.744,0.0382,96.51,0.707
+When You Want Me,Speelburg,Porsche,0.00178,0.577,233125,0.763,0.000437,0.489,-6.906,0.0465,153.959,0.825
+Seether,Veruca Salt,American Thighs,0.00291,0.612,196573,0.848,0.00319,0.0687,-9.178,0.0463,136.196,0.632
+Intergalactic - Remastered 2009,Beastie Boys,Hello Nasty (Deluxe Edition/Remastered),0.022,0.734,231493,0.864,9.85e-06,0.246,-6.119,0.303,105.932,0.47
+Panic Switch,Silversun Pickups,Swoon,0.000202,0.163,343907,0.885,0.0121,0.228,-4.623,0.0725,198.556,0.549
+Pepper,Butthole Surfers,Electriclarryland,0.00589,0.631,297267,0.804,0.00116,0.16,-5.492,0.166,79.898,0.671
+Jet Fighter,Butthole Surfers,Weird Revolution,0.0173,0.577,177573,0.933,2.91e-05,0.237,-5.354,0.0624,100.034,0.346
+They Came In,Butthole Surfers,Weird Revolution,0.000182,0.469,240947,0.81,0.00184,0.56,-6.245,0.0489,99.165,0.349
+I Got To Put The Hammer Down,Ween,The Friends EP,0.0548,0.704,141107,0.977,8.58e-05,0.0432,-4.058,0.0691,134.966,0.957
+Creatures (For a While),311,Evolver,0.00205,0.519,264493,0.894,0.0,0.15,-7.074,0.0676,190.592,0.686
+Gardenhead / Leave Me Alone,Neutral Milk Hotel,On Avery Island,0.00454,0.419,193973,0.62,0.000156,0.466,-9.773,0.0324,104.179,0.309
+Gold Guns Girls,Metric,Fantasies,0.000949,0.494,245280,0.963,0.0494,0.0932,-5.394,0.057,179.963,0.833
+Volcano Girls,Veruca Salt,Eight Arms To Hold You,0.000789,0.543,198933,0.961,1.29e-06,0.431,-2.749,0.0373,131.463,0.567
+Everything Is,Neutral Milk Hotel,Everything Is,0.00908,0.517,212933,0.637,0.00509,0.202,-8.156,0.0706,112.056,0.672
+The Good Life,Weezer,Pinkerton - Deluxe Edition,0.154,0.532,256987,0.899,0.0,0.332,-4.014,0.0428,135.755,0.626
+Believe,The Bravery,The Sun And The Moon,0.00501,0.385,226347,0.949,2.13e-06,0.113,-3.369,0.0459,166.137,0.517
+21st Century Schizoid Man (Radio Edit),King Crimson,"21st Century Schizoid Man (KC50, Vol. 1)",0.000813,0.31,285973,0.606,0.764,0.114,-8.416,0.13,92.424,0.525
+Pink Triangle,Weezer,Pinkerton,0.0118,0.282,238600,0.894,0.0,0.347,-4.834,0.0822,118.809,0.466
+Pet Sematary,Starcrawler,Pet Sematary,1.38e-06,0.4,203240,0.812,0.00936,0.225,-9.341,0.0483,152.137,0.511
+Help I'm Alive,Metric,Fantasies,0.00826,0.57,286013,0.884,0.00322,0.364,-4.55,0.0601,118.485,0.405
+War Without Reason,Heaven Pierce Her,Ultrakill: Violence (Original Game Soundtrack),0.00206,0.54,408454,0.923,0.919,0.307,-7.36,0.0373,120.006,0.0647
+Set,King Gizzard & The Lizard Wizard,The Silver Cord,0.0243,0.578,236004,0.999,0.0,0.381,-4.595,0.186,125.02,0.353
+Changing,The Airborne Toxic Event,All At Once,0.0186,0.613,200053,0.913,0.0,0.084,-4.26,0.0545,102.524,0.641
+British Bombs,Declan McKenna,British Bombs,0.0462,0.674,297715,0.865,0.0,0.381,-6.167,0.0412,131.975,0.694
+A Beginner's Guide to Destroying the Moon,Foster The People,Supermodel,0.000257,0.515,279680,0.913,0.00174,0.284,-4.345,0.0524,119.989,0.266
+Le Risque,King Gizzard & The Lizard Wizard,Flight b741,0.00213,0.543,214125,0.84,2.66e-05,0.119,-6.185,0.221,151.111,0.531
+Witchcraft,King Gizzard & The Lizard Wizard,"PetroDragonic Apocalypse; or, Dawn of Eternal Night: An Annihilation of Planet Earth and the Beginning of Merciless Damnation",4.95e-05,0.286,303696,0.936,0.000549,0.46,-5.897,0.0393,102.225,0.723
+Raw Feel,King Gizzard & The Lizard Wizard,Flight b741,0.00859,0.504,256953,0.903,0.0,0.633,-6.243,0.129,96.009,0.645
+Field of Vision,King Gizzard & The Lizard Wizard,Flight b741,0.00762,0.463,215235,0.859,0.0,0.134,-5.671,0.0914,132.607,0.74
+Real's Not Real,King Gizzard & The Lizard Wizard,Fishing for Fishies,0.00172,0.297,220840,0.762,0.555,0.408,-6.937,0.0428,159.685,0.592
+Someday Soon,Harlem,Hippies,0.121,0.339,159773,0.919,0.0215,0.065,-4.221,0.0409,145.413,0.552
+Whirring,The Joy Formidable,The Big Roar,0.000129,0.335,407160,0.968,0.288,0.341,-3.775,0.0505,145.061,0.372
+Dragon,King Gizzard & The Lizard Wizard,Dragon,1.27e-05,0.515,584700,0.965,0.0617,0.23,-6.008,0.0913,145.157,0.558
+Perihelion,King Gizzard & The Lizard Wizard,Infest The Rats' Nest,0.00669,0.237,191320,0.928,0.59,0.101,-5.798,0.0564,97.139,0.451
+Eyes Like The Sky,King Gizzard & The Lizard Wizard,Eyes Like The Sky,0.744,0.216,197024,0.778,0.0449,0.423,-7.481,0.0813,198.625,0.423
+I’m The President,KNOWER,KNOWER FOREVER,0.578,0.795,247000,0.842,0.705,0.139,-6.093,0.0438,105.627,0.965

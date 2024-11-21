@@ -1,0 +1,51 @@
+Name,Artist(s),Album,Acousticness,Danceability,Duration_ms,Energy,Instrumentalness,Liveness,Loudness,Speechiness,Tempo,Valance
+Always Forever,Cults,Static,0.00181,0.174,223747,0.742,0.281,0.198,-5.93,0.0485,163.378,0.36
+When Your Heart Stops Beating,+44,When Your Heart Stops Beating,0.000367,0.416,192787,0.967,0.0,0.0632,-2.289,0.109,171.032,0.431
+It's Time,Imagine Dragons,Night Visions,0.016,0.656,240307,0.884,0.0,0.144,-4.748,0.0372,105.009,0.858
+In a Jar,Dinosaur Jr.,You're Living All Over Me,0.000825,0.317,208667,0.941,0.000651,0.1,-5.632,0.0729,157.958,0.625
+Hot Water,King Gizzard & The Lizard Wizard,I'm In Your Mind Fuzz,0.859,0.627,203787,0.609,0.891,0.116,-9.387,0.0332,86.863,0.734
+"Fine, Great",Modern Baseball,You're Gonna Miss It All,0.0595,0.61,148047,0.738,0.0,0.062,-5.949,0.0609,131.994,0.748
+Evolution,311,Soundsystem,0.171,0.774,257133,0.822,0.0,0.0346,-7.791,0.0925,90.922,0.895
+Russian Roulette,The Murlocs,Calm Ya Farm,9.68e-05,0.407,234850,0.93,0.642,0.0397,-4.816,0.0902,173.986,0.651
+Can I Go With You,Gilbert O'Sullivan,Back to Front (Deluxe Edition),0.171,0.796,166573,0.642,2.51e-06,0.0708,-7.859,0.0291,105.969,0.973
+Celestial Dogs,The Lewers,518A,0.0155,0.466,204547,0.709,0.833,0.0986,-8.799,0.0303,153.331,0.752
+Broken Candle,Wand,Ganglion Reef,0.00498,0.402,160520,0.888,0.0141,0.228,-4.345,0.0543,139.938,0.593
+Devil's Haircut,"The Knocks, Foster The People",Melody & Silence,0.0588,0.693,183004,0.877,0.0206,0.226,-5.336,0.0423,123.954,0.766
+Two Fingers,Jake Bugg,Jake Bugg,0.00252,0.486,195987,0.677,0.0,0.102,-5.227,0.0314,120.576,0.913
+Electric Feel,MGMT,Oracular Spectacular,0.0709,0.763,229640,0.803,0.285,0.348,-3.713,0.0351,103.04,0.561
+Twilight,bôa,Twilight,0.158,0.386,228800,0.826,0.000489,0.101,-7.847,0.114,187.094,0.376
+Never as Tired as When I'm Waking Up,LCD Soundsystem,LCD Soundsystem,0.408,0.647,289893,0.482,0.0222,0.199,-6.631,0.0262,125.816,0.359
+You Only Live Once,The Strokes,First Impressions Of Earth,0.0238,0.63,189227,0.908,0.592,0.116,-2.42,0.0326,120.522,0.968
+Party Rock Anthem,"LMFAO, Lauren Bennett, GoonRock",Sorry For Party Rocking,0.0202,0.75,262147,0.736,0.0,0.265,-4.168,0.155,130.011,0.355
+New Flesh,Current Joys,Wild Heart,0.887,0.62,167987,0.594,0.5,0.0917,-16.066,0.0383,165.861,0.698
+The Best Ever Death Metal Band in Denton,The Mountain Goats,All Hail West Texas (Remastered),0.762,0.383,156960,0.643,0.0095,0.386,-7.659,0.0393,62.266,0.78
+All the Go Inbetweens,Silversun Pickups,Pikul,0.00563,0.36,469507,0.414,0.606,0.104,-8.446,0.0301,157.107,0.238
+"You'll Be In My Heart - From ""Tarzan""/Soundtrack Version",Phil Collins,Disney Summer Songs,0.0643,0.566,258133,0.748,5.16e-06,0.0925,-6.549,0.0301,96.586,0.614
+Outro,Wang Wen,Invisible City,0.926,0.0896,257448,0.138,0.906,0.0966,-20.155,0.0423,86.266,0.0364
+Won't Get Fooled Again - Original Album Version,The Who,Who's Next (Deluxe Edition),0.301,0.686,511400,0.92,0.27,0.0807,-6.231,0.0566,135.027,0.225
+Let's Dance - 2018 Remaster,David Bowie,Let's Dance (2018 Remaster),0.0125,0.654,457676,0.743,0.0272,0.153,-7.44,0.0605,114.846,0.632
+Maneater,Daryl Hall & John Oates,H2O,0.0405,0.724,273173,0.498,8.56e-05,0.0761,-13.083,0.0423,88.825,0.823
+Over My Head (Cable Car),The Fray,How To Save A Life,0.022,0.592,236267,0.729,0.0,0.0653,-4.156,0.0448,116.03,0.709
+Brandy (You're a Fine Girl),Looking Glass,Looking Glass,0.396,0.716,186827,0.625,1.97e-05,0.134,-11.369,0.0601,125.276,0.826
+Little Games,The Colourist,The Colourist,0.000621,0.571,161987,0.817,0.00295,0.165,-4.766,0.0436,110.491,0.607
+Looking at Engines,Font,Strange Burden,0.0169,0.588,302467,0.563,0.000115,0.133,-9.371,0.0477,104.915,0.278
+Dirty Laundry,Don Henley,I Can’t Stand Still,0.0848,0.756,336800,0.772,0.0026,0.0792,-6.65,0.0306,98.382,0.954
+Heroes & Heroin,Gary Jules,Greetings from the Side,0.285,0.467,194667,0.518,0.00034,0.118,-9.816,0.0391,79.525,0.488
+Karma Comes,ORB,Tailem Bend,0.347,0.348,218016,0.459,0.038,0.324,-11.52,0.0368,126.216,0.344
+She Hates Me,Puddle Of Mudd,Come Clean,0.00935,0.58,216760,0.748,0.0,0.753,-5.433,0.0323,109.781,0.584
+Say Hello 2 Heaven - 25th Anniversary Mix,Temple Of The Dog,Temple Of The Dog (Deluxe Edition),0.0576,0.304,384467,0.769,9.14e-06,0.373,-6.672,0.0334,148.736,0.285
+Every Breath You Take,The Police,Synchronicity (Remastered 2003),0.543,0.82,253920,0.452,0.00294,0.0714,-9.796,0.0348,117.401,0.74
+Under Smithville,For Squirrels,Example,0.362,0.304,273252,0.919,0.0,0.164,-5.937,0.0345,150.437,0.906
+Mamma Mia,ABBA,Abba,0.295,0.749,213267,0.748,0.000443,0.469,-7.011,0.0323,137.547,0.827
+No Poetry,Gary Jules,Trading Snakeoil For Wolftickets,0.454,0.559,236600,0.611,0.0399,0.104,-11.029,0.0312,89.123,0.425
+Bore U,Twen,One Stop Shop,0.0022,0.637,227765,0.881,8.57e-06,0.0752,-4.821,0.0364,104.972,0.726
+Outside (feat. Ellie Goulding),"Calvin Harris, Ellie Goulding",Motion,0.213,0.646,227267,0.823,0.0,0.322,-4.123,0.0394,128.035,0.418
+You Won't Get With Me Tonight,Weezer,Pinkerton - Deluxe Edition,0.00167,0.411,209360,0.966,0.0,0.404,-4.286,0.0553,150.908,0.568
+Cryin',Aerosmith,Get A Grip,8.31e-05,0.452,308560,0.813,0.0381,0.274,-4.45,0.0319,105.757,0.539
+High Dive,Andrew McMahon in the Wilderness,Andrew McMahon In The Wilderness,0.00384,0.564,227204,0.799,0.0,0.0793,-6.572,0.0615,162.968,0.793
+The Vampires Of New York,Marcy Playground,Marcy Playground,0.648,0.544,175867,0.383,0.000852,0.111,-10.699,0.035,156.889,0.418
+Citadel on a Satellite,SLIFT,UMMON,0.00991,0.145,607592,0.877,0.828,0.0957,-7.159,0.131,187.828,0.131
+Rock 'n' Roll Fantasy - 2009 Remaster,Bad Company,Desolation Angels (2009 Remaster),0.0261,0.605,197467,0.716,5.82e-06,0.13,-5.471,0.0285,112.302,0.868
+Talking Straight,Rolling Blackouts Coastal Fever,Hope Downs,0.000527,0.336,224526,0.784,0.574,0.0957,-4.822,0.0406,85.687,0.607
+Misery,Maroon 5,Hands All Over (Revised International Standard version),0.000315,0.703,216200,0.81,0.0,0.216,-4.874,0.0425,102.981,0.726
+Hungry Like the Wolf - 2009 Remaster,Duran Duran,Rio (Collector's Edition),0.0433,0.691,220627,0.812,1.16e-06,0.299,-7.772,0.0558,127.568,0.685
