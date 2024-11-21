@@ -1,18 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Playlist Tracks</title>
-  </head>
-  <body>
+    <title>Playlist Tracks and Recommendations</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1f2f25; /* Dark background for contrast */
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffddff; /* Light purple for titles */
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #9e3ab7; /* Purple links */
+            text-decoration: none;
+            font-size: 1rem;
+            display: inline-block;
+            background-color: #500973;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #c285dd; /* Lighter purple on hover */
+        }
+
+        img {
+            margin: 20px auto;
+            border-radius: 10px;
+            border: 2px solid white;
+            display: block;
+        }
+
+        /* Table Styling */
+        .table-container {
+            max-width: 90%; /* Limits table width */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2a3c2d; /* Slightly lighter dark green */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow-x: auto; /* Enable horizontal scrolling */
+            transform: scale(0.85); /* Scales the table to 85% of its original size */
+            transform-origin: center top; /* Keeps the scaling centered */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px; /* Ensures table does not shrink too much */
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            transition: all 0.3s ease; /* Smooth transitions */
+        }
+
+        th {
+            background-color: #500973; /* Dark purple for header */
+            color: #ffddff; /* Light purple text */
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            cursor: pointer; /* Pointer cursor for collapsible columns */
+            position: relative;
+            transition: all 0.3s ease; /* Smooth transitions */
+        }
+
+        th::after {
+            content: "▼"; /* Default arrow icon for expanded state */
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+            color: white;
+        }
+
+        th.collapsed::after {
+            content: "▶"; /* Arrow pointing right for collapsed state */
+        }
+
+        /* Collapsed column styles */
+        td.collapsed {
+            max-width: 0; /* Shrinks the data cells to invisible */
+            padding: 0; /* Removes padding for collapsed columns */
+            overflow: hidden; /* Ensures content is not visible */
+            white-space: nowrap;
+            font-size: 0; /* Shrinks text size */
+        }
+
+        tr:nth-child(even) {
+            background-color: #34493b; /* Darker alternating row color */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #2a3c2d; /* Default row color */
+        }
+
+        tr:hover {
+            background-color: #9e3ab7; /* Hover effect with purple */
+            color: white; /* Ensures text stays readable */
+        }
+
+        td {
+            font-size: 1rem;
+            color: #ffffff;
+            transition: all 0.3s ease; /* Smooth transitions */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .table-container {
+                padding: 10px;
+                transform: scale(1); /* Reset scale for smaller screens */
+            }
+
+            th, td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
     <h1>Recommendations</h1>
-    <div>{{ recommended_tracks_info|safe }}</div>
+    <!-- Recommended Tracks Table -->
+    <div class="table-container">
+        <table>
+            {{ recommended_tracks_info|safe }}
+        </table>
+    </div>
+
     <h1>Playlist Tracks</h1>
     {% if playlist_cover_image %}
     <img src="{{ playlist_cover_image }}" alt="Playlist Cover" width="150" />
     {% endif %}
-    <div>{{ playlist_tracks_info|safe }}</div>
+
+    <!-- Playlist Tracks Table -->
+    <div class="table-container">
+        <table>
+            {{ playlist_tracks_info|safe }}
+        </table>
+    </div>
+
+    <a href="{{ url_for('home') }}">Back to Home</a>
     <a href="{{ url_for('get_playlists') }}">Back to Playlists</a>
-  </body>
+
+    <script>
+        // Add accordion-like collapsible column functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const headers = document.querySelectorAll("th"); // Select all table headers
+
+            headers.forEach((header, index) => {
+                const originalText = header.textContent.trim(); // Store the original header text
+
+                header.addEventListener("click", () => {
+                    const rows = document.querySelectorAll("tr");
+                    const isCollapsed = header.classList.contains("collapsed");
+
+                    // Toggle collapsed state for header and corresponding column cells
+                    rows.forEach(row => {
+                        const cells = row.children;
+                        if (cells[index]) {
+                            cells[index].classList.toggle("collapsed", !isCollapsed);
+                        }
+                    });
+
+                    // Update header text and toggle the collapsed class
+                    if (isCollapsed) {
+                        header.textContent = originalText; // Restore original text
+                        header.classList.remove("collapsed");
+                    } else {
+                        header.textContent = "→"; // Change to right-pointing arrow when collapsed
+                        header.classList.add("collapsed");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 </html>
